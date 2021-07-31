@@ -1,46 +1,68 @@
-import React from 'react';
+import React, {useContext, useState} from 'react';
 import { Link } from 'react-router-dom';
 import { HeaderArea } from './styled';
-
-import { isLogged } from '../../../helpers/AuthHandler';
+import { context } from '../../../pages/Context/context';
+import useApi from '../../../helpers/BookAPI'
+import { ErrorMessage } from '../../MainComponents'
 
 const Header = () => {
-    let logged = isLogged();
+    const [error, setError] = useState('');
+
+    let cx = useContext(context);
+
+    const api = useApi()
+
+    const handleDelete = async ()=>{
+        const json = await api.logout();
+
+        if(json.error) {
+            setError(json.error);
+        } else {
+            window.location.href = '/'
+        }
+    }
+
 
     return (
         <HeaderArea>
+            {error &&
+                    <ErrorMessage>{error}</ErrorMessage>
+                }
             <div className="container">
                 <div className="logo">
                     <Link to="/">
-                        <span Class="logo-1">B</span>
-                        <span Class="logo-2">O</span>
-                        <span Class="logo-3">O</span>
-                        <span Class="logo-4">K</span>
-                        <span Class="logo-5">F</span>
-                        <span Class="logo-6">O</span>
-                        <span Class="logo-7">L</span>
-                        <span Class="logo-8">I</span>
-                        <span Class="logo-9">O</span>
+                        <span className="logo-1">B</span>
+                        <span className="logo-2">O</span>
+                        <span className="logo-3">O</span>
+                        <span className="logo-4">K</span>
+                        <span className="logo-5">F</span>
+                        <span className="logo-6">O</span>
+                        <span className="logo-7">L</span>
+                        <span className="logo-8">I</span>
+                        <span className="logo-9">O</span>
                     </Link>
                 </div>
                 <nav>
                     <ul>
-                        {logged &&
+                        {cx &&
                             <>
                             <nav>
+                            <li className="frase">
+                                Olá, bem vindo(a) {cx.name}! 
+                            </li>
                             <li>
                                 <Link className="conta"to="/my-account"> Minha Conta </Link>
                             </li>
                             <li>
                                 <Link className="button" to="/favorite">Favorito</Link>
                             </li>
-                            <li>
-                                <Link className="sair"to="/logout">Sair</Link>
+                            <li onClick={handleDelete}>
+                                <Link className="sair"to="/">Sair</Link>
                             </li>
                             </nav>
                             </>
                         }
-                        {!logged &&
+                        {!cx &&
                             <>
                             <li>
                                 <Link className="frase"to="/signin">Olá, bem vindo(a)! </Link>

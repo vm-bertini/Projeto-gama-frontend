@@ -6,7 +6,7 @@ import Livros from './pages/Livros';
 import NotFound from './pages/NotFound';
 import SignIn from './pages/SignIn';
 
-export default () => {
+const Routes =  () => {
     return(
         <Switch>
             <Route exact path="/">
@@ -24,3 +24,5 @@ export default () => {
         </Switch>
     );
 }
+
+export default Routes

@@ -1,7 +1,7 @@
 import Cookies from 'js-cookie';
-import qs from 'qs';
+import axios from "axios"
 
-const BASEAPI = 'http://localhost:3001';
+const BASEAPI = 'http://localhost:3333';
 
 const apiFetchPost = async (endpoint, body) => {
     if(!body.token) {
@@ -11,15 +11,24 @@ const apiFetchPost = async (endpoint, body) => {
         }
     }
 
-    const res = await fetch(BASEAPI+endpoint, {
-        method: 'POST',
-        headers:{
-            'Accept': 'application/json',
-            'Content-Type': 'application/json'
-        },
-        body:JSON.stringify(body)
-    }); 
-    const json = await res.json();
+    const json = await axios.post(BASEAPI+endpoint, body, {withCredentials: true}).then((response) =>{
+        return response.data
+    }).catch((err) =>{
+        return err.response.data
+    })
+
+    if(json.notallowed) {
+        window.location.href= 'signin/';
+        return;
+    }
+
+    return json;
+}
+
+const apiFetchGet = async (endpoint) => {
+
+    const res = await axios.get(BASEAPI+endpoint, {withCredentials: true}); 
+    const json = res.data
     
     if(json.notallowed) {
         window.location.href= 'signin/';
@@ -29,19 +38,13 @@ const apiFetchPost = async (endpoint, body) => {
     return json;
 }
 
-const apiFetchGet = async (endpoint, body = []) => {
-    if(!body.token) {
-        let token = Cookies.get('token');
-        if(token) {
-            body.token = token;
-        }
-    }
+const apiFetchDel = async (endpoint) => {
 
-    const res = await fetch(`${BASEAPI+endpoint}?${qs.stringify(body)}`); 
-    const json = await res.json();
+    const res = await axios.delete(BASEAPI+endpoint, {withCredentials: true}); 
+    const json = res.data
     
     if(json.notallowed) {
-        window.location.href= 'signin/';
+        window.location.href= '/';
         return;
     }
 
@@ -50,13 +53,23 @@ const apiFetchGet = async (endpoint, body = []) => {
 
 const BookAPI = {
 
-    login:async (email, password) => {
+    login:async (name, password) => {
         const json = await apiFetchPost(
-            '/user/signin',
-            {email, password}
+            '/v1/login',
+            {name, password}
         ); 
         return json;  
+    },
+    getUserInfo: async () => {
+        const json = await apiFetchGet('/v1/login/')
+        return json
+    },
+    logout:async ()=>{
+        const json = await apiFetchDel('/v1/logout/')
+        return json
     }
 };
 
-export default () => BookAPI;
+const useApi = () => BookAPI;
+
+export default useApi

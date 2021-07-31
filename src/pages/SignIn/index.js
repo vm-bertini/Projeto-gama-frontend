@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { PageArea } from './styled';
 import useApi from '../../helpers/BookAPI';
-import { doLogin } from '../../helpers/AuthHandler';
 
 import { PageContainer, PageTitle, ErrorMessage } from '../../components/MainComponents';
 
@@ -23,8 +22,7 @@ const Page = () => {
         if(json.error) {
             setError(json.error);
         } else {
-            doLogin(json.token, rememberPassword);
-            window.location.href = '/';
+            window.location.href = '/'
         }
 
         setDisabled(false);
@@ -78,9 +76,9 @@ const Page = () => {
                             type="checkbox" 
                             disabled={disabled} 
                             value={password}
-                            onChange={e=>setPassword(e.target.value)} 
+                            onChange={e=>setPassword(e.target.value) && setRememberPassword(!rememberPassword)} 
                             checked={rememberPassword}
-                            onChange={()=>setRememberPassword(!rememberPassword)}
+                            
                         />
                         </div>
                     </label>

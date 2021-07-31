@@ -4,6 +4,7 @@ import { BrowserRouter } from 'react-router-dom';
 
 import './App.css';
 
+import Store from './pages/Context/context';
 import { Template } from './components/MainComponents'
 import Header from './components/partials/Header';
 import Footer from './components/partials/Footer';
@@ -14,9 +15,11 @@ const Page = (props) => {
   return (
     <BrowserRouter>
       <Template>
-        <Header />
-        <Routes />
-        <Footer />
+        <Store>
+          <Header />
+          <Routes />
+          <Footer />
+        </Store>
       </Template>
     </BrowserRouter>
   );
