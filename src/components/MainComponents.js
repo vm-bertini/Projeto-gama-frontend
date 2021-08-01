@@ -8,10 +8,19 @@ export const PageContainer = styled.div`
 `;
 
 export const PageTitle = styled.h1`
-    font-size:27px;
+    padding-top:80px;
+    text-align: center;
+    font-size:25px;
+    font-family:Inter;
+    font-style: normal;
+    font-weight: bold;
+    color: #3B2F93;
 `;
 
-export const PageBody = styled.div``;
+export const PageBody = styled.div`
+
+`;
+    
 
 export const ErrorMessage = styled.div`
     margin:10px 0;
