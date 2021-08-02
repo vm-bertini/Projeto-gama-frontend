@@ -17,6 +17,7 @@ const Page = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         setDisabled(true);
+        setError('');
 
         const json = await api.login(email, password);
 
@@ -72,7 +73,7 @@ const Page = () => {
                         <label className="area">
                         <div className="area--button"></div>
                         <div className="area--input">
-                            <button2 disabled={disabled} >Cadastre-se</button2>
+                        <a href="../signup" target="_parent"><button2 disabled={disabled} >Cadastre-se</button2></a>
                     </div>
                     <label className="area">
                         <div className="area--tit"></div>

@@ -1,13 +1,21 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React, { useState } from 'react';
+import { PageArea } from './styled';
+import useApi from '../../helpers/BookAPI';
+
+
+import { PageContainer} from '../../components/MainComponents';
 
 const Page = () => {
-    return (
-        <div>
-            <h1>Página Inicial</h1>
+    const api = useApi();
 
-            <Link to="/Livros">Livros</Link>
-        </div>
+    return(
+        <PageContainer>
+            <PageArea>
+               <div ClassName="Foto--Inicial">
+                   <img src="./img/Home.jpg"></img>
+               </div>
+            </PageArea>
+        </PageContainer>
     );
 }
 

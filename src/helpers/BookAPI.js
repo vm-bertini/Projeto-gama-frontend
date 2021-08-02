@@ -60,6 +60,15 @@ const BookAPI = {
         ); 
         return json;  
     },
+
+    register:async (name, userName, email, password, postalCode, readerClassification) => {
+        const json = await apiFetchPost(
+            '/v1/register',
+            {name, userName, email, password, postalCode, state:readerClassification}
+            ); 
+        return json;  
+    },
+
     getUserInfo: async () => {
         const json = await apiFetchGet('/v1/login/')
         return json
@@ -67,9 +76,17 @@ const BookAPI = {
     logout:async ()=>{
         const json = await apiFetchDel('/v1/logout/')
         return json
+    },
+
+    getStates:async () => {
+        const json = await apiFetchGet(
+            '/states'
+        );
+        return json.states;
     }
 };
 
 const useApi = () => BookAPI;
+
 
 export default useApi
