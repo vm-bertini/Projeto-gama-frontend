@@ -1,21 +1,27 @@
 import React, { useState } from 'react';
 import { PageArea } from './styled';
 import useApi from '../../helpers/BookAPI';
+import Foto from './img/Home.jpg'
+import { Link } from 'react-router-dom';
 
-
-import { PageContainer} from '../../components/MainComponents';
+import { PageContainer1} from '../../components/MainComponents';
 
 const Page = () => {
     const api = useApi();
 
     return(
-        <PageContainer>
+        <PageContainer1>
             <PageArea>
-               <div ClassName="Foto--Inicial">
-                   <img src="./img/Home.jpg"></img>
+                <div className="Foto">
+               <div className="Foto--Inicial">
+                   <img src={Foto}/>
                </div>
+               </div>
+               <div>
+            <Link to="/Livros">Livros</Link>
+        </div>
             </PageArea>
-        </PageContainer>
+        </PageContainer1>
     );
 }
 

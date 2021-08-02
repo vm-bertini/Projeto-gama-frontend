@@ -7,6 +7,11 @@ export const PageContainer = styled.div`
     margin:auto;
 `;
 
+export const PageContainer1 = styled.div`
+    max-width:1000px;
+`;
+
+
 export const PageTitle = styled.h1`
     padding-top:80px;
     text-align: center;
