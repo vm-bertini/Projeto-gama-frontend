@@ -20,6 +20,7 @@ export const PageTitle = styled.h1`
     font-style: normal;
     font-weight: bold;
     color: #3B2F93;
+    
 `;
 
 export const PageBody = styled.div`

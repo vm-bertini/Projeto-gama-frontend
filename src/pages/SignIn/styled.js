@@ -20,8 +20,8 @@ export const PageArea = styled.div`
     margin-left:auto;
     margin-right:auto;
     text-align:center;
-    width:64%;
-    padding:15px;
+    width:66%;
+    padding:5px;
     font-weight:bold;
     font-size:14px;
     font-family:inter;

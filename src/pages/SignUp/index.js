@@ -71,6 +71,7 @@ const Page = () => {
                             required
                         />
                         </div>
+                        <br/>
                     </label>
                     <label className="area">
                         <div className="area--titt">Nome de Usuário</div>
@@ -83,6 +84,7 @@ const Page = () => {
                             required
                         />
                         </div>
+                        <br/>
                     </label>
                     <label className="area">
                         <div className="area--tittt">Código postal</div>
@@ -95,6 +97,7 @@ const Page = () => {
                             required
                         />
                         </div>
+                        <br/>
                     </label>
                     <label className="area">
                         <div className="area--title">E-mail</div>
@@ -107,6 +110,7 @@ const Page = () => {
                             required
                         />
                         </div>
+                        <br/>
                     </label>
                     <label className="area">
                         <div className="area--title">Senha</div>
@@ -119,6 +123,7 @@ const Page = () => {
                             required
                         />
                         </div>
+                        <br/>
                     </label>
                     <label className="area">
                         <div className="area--titt">Confirmar senha</div>
@@ -131,18 +136,7 @@ const Page = () => {
                             required
                         />
                         </div>
-                    </label>
-                    <label className="area">
-                        <div className="area--titt">Nível de leitura</div>
-                        <div className="area--input">
-                            <select className="area--option" value={readerClassification} onChange={e=>setreaderClassification(e.target.value)} required>
-                                <option>Selecione</option>
-                                
-                               { /* {stateList.map((i, k)=>
-                                <option key={k} value={i._id}>{i.name}</option>
-                                    )}  */}
-                            </select>
-                        </div>
+                        <br/>
                     </label>
                     <label className="area">
                         <div className="area--title"></div>

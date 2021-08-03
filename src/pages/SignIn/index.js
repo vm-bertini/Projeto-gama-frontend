@@ -50,6 +50,7 @@ const Page = () => {
                             required
                         />
                         </div>
+                        <br/>
                     </label>
                     <label className="area">
                         <div className="area--title">Senha</div>
@@ -62,6 +63,7 @@ const Page = () => {
                             required
                         />
                         </div>
+                        <br/>
                     </label>
                     <label className="area">
                         <div className="area--title"></div>
