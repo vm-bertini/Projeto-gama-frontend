@@ -141,7 +141,7 @@ const Page = () => {
                     <label className="area">
                         <div className="area--title"></div>
                         <div className="area--input">
-                            <button1 disabled={disabled}>Criar Cadastro</button1>      
+                        <a href="../livros" target="_parent"><button1 disabled={disabled}>Criar Cadastro</button1></a>    
                     <label className="area">
                         <div className="area--tit"></div>
                     </label>

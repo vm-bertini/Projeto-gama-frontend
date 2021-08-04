@@ -22,33 +22,6 @@ a {
     height:98px;
 }
 
-.logo-1,
-.logo-2,
-.logo-3,
-.logo-4,
-.logo-5,
-.logo-6,
-.logo-7,
-.logo-8,
-.logo-9 {
-    font-size:27px;
-    font-weight:bold;
-    font-family:Roboto,-apple-system,BlinkMacSystemFont,"Segoe UI","Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji"; 
-
-}
-
-.logo-1 { color:#FFFFFF; }
-.logo-2 { color:#FFFFFF; }
-.logo-3 { color:#FFFFFF; }
-.logo-4 { color:#FFFFFF; }
-.logo-5 { color:#FFFFFF; }
-.logo-6 { color:#FFFFFF; }
-.logo-7 { color:#FFFFFF; }
-.logo-8 { color:#FFFFFF; }
-.logo-9 { color:#FFFFFF; }
-
-}
-
 nav {
     padding-top:15px;
     padding-bottom:10px;
@@ -79,9 +52,6 @@ nav {
         text-decoration:none;
 }
 
-    .login:hover {
-        text-decoration:underline;
-}
 
 logged {
     display:flex;
@@ -106,4 +76,28 @@ logged {
         font-size:14px;
         text-decoration:none;
 }
+
+button {
+    text-align:center;
+    display:block;
+    margin-left:auto;
+    margin-right:auto;
+    background-color:#F2994A;
+    border:0;
+    outline:0;
+    padding:8px 10px;
+    border-radius:20px;
+    width: 120px;
+    color:#FFF;
+    font-size:15px;
+    cursor:pointer;
+    font-family:inter;
+    align-items:center;
+    text-decoration:none;
+
+    &:hover {
+        background-color:#FF7F50;
+}
+
+
 `;

@@ -4,6 +4,7 @@ import { HeaderArea } from './styled';
 import { context } from '../../../pages/Context/context';
 import useApi from '../../../helpers/BookAPI'
 import { ErrorMessage } from '../../MainComponents'
+import Logo from './img/Logo.png'
 
 const Header = () => {
     const [error, setError] = useState('');
@@ -31,15 +32,7 @@ const Header = () => {
             <div className="container">
                 <div className="logo">
                     <Link to="/">
-                        <span className="logo-1">B</span>
-                        <span className="logo-2">O</span>
-                        <span className="logo-3">O</span>
-                        <span className="logo-4">K</span>
-                        <span className="logo-5">F</span>
-                        <span className="logo-6">O</span>
-                        <span className="logo-7">L</span>
-                        <span className="logo-8">I</span>
-                        <span className="logo-9">O</span>
+                        <span className="logo-1"><img src={Logo}/></span>
                     </Link>
                 </div>
                 <nav>
@@ -65,10 +58,7 @@ const Header = () => {
                         {!cx &&
                             <>
                             <li>
-                                <Link className="frase"to="/signin">Olá, bem vindo(a)! </Link>
-                            </li>
-                            <li>
-                                <Link className="login"to="/signin">Entre ou cadastre-se</Link>
+                                <Link className="login"to="/signin"><button>Fazer login</button></Link>
                             </li>
                             </>
                         }

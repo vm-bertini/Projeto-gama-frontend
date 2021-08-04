@@ -17,16 +17,17 @@ export const FooterArea = styled.div`
 
 
 .area--book {
-    display:block
+    text-align:center;
+    display:block;
     margin-left:auto;
     margin-right:auto;
-    bottom:20px;
-    text-align:center;
-    width:66%;
+    width:100%;
     padding:5px;
     font-weight:bold;
-    font-size:14px;
+    font-size:20px;
     font-family:inter;
+
+    
 }
     
 
