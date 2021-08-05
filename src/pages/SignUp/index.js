@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import { PageArea } from './styled';
 import useApi from '../../helpers/BookAPI';
-import { Link } from 'react-router-dom';
+import { useHistory, useLocation } from 'react-router';
+
 
 
 
@@ -9,6 +10,8 @@ import { PageContainer, PageTitle, ErrorMessage } from '../../components/MainCom
 
 const Page = () => {
     const api = useApi();
+    const history = useHistory()
+    const location = useLocation()
 
 
     const [name, setName] = useState('');
@@ -17,9 +20,12 @@ const Page = () => {
     const [password, setPassword] = useState('');
     const [confirmPassword, setConfirmPassword] = useState('');
     const [postalCode, setPostalCode] = useState('');
-    const [readerClassification, setreaderClassification] = useState('');
     const [disabled, setDisabled] = useState(false);
     const [error, setError] = useState('');
+
+    if (location.state !== undefined && !error){
+        setError(location.state.message)
+    }
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -30,14 +36,17 @@ const Page = () => {
             setError('A senha inserida está incorreta');
             setDisabled(false);
             return;
-        }
-
-        const json = await api.register(name, userName, email, password, postalCode, readerClassification);
-
-        if(json.error) {
-            setError(json.error);
-        } else {
-            window.location.href = "/signup"
+        }else{
+            history.push({
+                pathname: "/livros",
+                state: {info: {
+                    name:name,
+                    userName:userName,
+                    email:email,
+                    password:password,
+                    postalCode:postalCode
+                }}
+            })
         }
 
         setDisabled(false);
@@ -133,7 +142,7 @@ const Page = () => {
                     <label className="area">
                         <div className="area--title"></div>
                         <div className="area--input">
-                        <button className="button"> <Link>Criar Cadastro</Link></button>  
+                        <button className="button">Criar Cadastro</button>   
                     <label className="area">
                         <div className="area--tit"></div>
                     </label>

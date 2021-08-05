@@ -61,10 +61,10 @@ const BookAPI = {
         return json;  
     },
 
-    register:async (name, userName, email, password, postalCode, readerClassification) => {
+    register:async (name, username, email, password, postalCode, readerClassification) => {
         const json = await apiFetchPost(
             '/v1/register',
-            {name, userName, email, password, postalCode, state:readerClassification}
+            {name, username, email, password, postalCode, readerClassification}
             ); 
         return json;  
     },

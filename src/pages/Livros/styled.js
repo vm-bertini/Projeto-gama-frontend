@@ -28,7 +28,7 @@ img {
 }
 
 
-.botão1 {
+.botao1 {
     display:block;
     position:absolute;
     float: right;
@@ -48,6 +48,29 @@ img {
 
     &:hover {
         background-color:#483D8B;
+}
+}
+
+.botao2 {
+    display:block;
+    position:absolute;
+    float: right;
+    margin-right:auto;
+    background-color:#3B2F93;
+    border:0;
+    outline:0;
+    width:120px;
+    padding:10px 10px;
+    border-radius:20px;
+    color:#FFF;
+    font-size:15px;
+    cursor:pointer;
+    font-family:Inter;
+    text-align:center;
+    margin-left:negativa;
+
+    &:hover {
+        background-color:#FF7F50;
 }
         
 }
