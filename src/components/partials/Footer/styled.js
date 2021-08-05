@@ -18,14 +18,13 @@ export const FooterArea = styled.div`
 
 .area--book {
     text-align:center;
-    display:block;
-    margin-left:auto;
-    margin-right:auto;
-    width:100%;
-    padding:5px;
-    font-weight:bold;
-    font-size:20px;
     font-family:inter;
+    font-weight:bold;
+    font-size:18px;
+    font-family:inter;
+    position:absolute;
+    float:center;
+ 
 
     
 }

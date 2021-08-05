@@ -28,10 +28,11 @@ export const PageArea = styled.div`
 .area--leitura {
     text-align:center;
     font-weight:bold;
-    font-size:14px;
+    font-size:18px;
     font-family:inter;
-    font-size:20px;
-    align-items:center;
+    position:absolute;
+    float:center;
+   
 }
 
 .button1 {
@@ -81,7 +82,6 @@ export const PageArea = styled.div`
 .imagem {
     display:table-cell;
     float:left;
-
     
 }
 
