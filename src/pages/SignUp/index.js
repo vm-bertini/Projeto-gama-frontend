@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
 import { PageArea } from './styled';
 import useApi from '../../helpers/BookAPI';
-import { useLocation } from 'react-router';
-import queryString from "query-string"
+import { Link } from 'react-router-dom';
 
 
 
@@ -10,8 +9,7 @@ import { PageContainer, PageTitle, ErrorMessage } from '../../components/MainCom
 
 const Page = () => {
     const api = useApi();
-    const {search} = useLocation()
-    const { api_error } = queryString.parse(search)
+
 
     const [name, setName] = useState('');
     const [userName, setUserName] = useState('');
@@ -39,7 +37,7 @@ const Page = () => {
         if(json.error) {
             setError(json.error);
         } else {
-            window.location.href = '/'
+            window.location.href = "/signup"
         }
 
         setDisabled(false);
@@ -52,9 +50,6 @@ const Page = () => {
             <PageArea>
                 {error &&
                     <ErrorMessage>{error}</ErrorMessage>
-                }
-                {api_error &&
-                    <ErrorMessage>{api_error}</ErrorMessage>
                 }
                 <form onSubmit={handleSubmit}>
                 <label className="area">
@@ -138,7 +133,7 @@ const Page = () => {
                     <label className="area">
                         <div className="area--title"></div>
                         <div className="area--input">
-                        <a href="../livros" target="_parent" className="button"><button className="button">Criar Cadastro</button></a>    
+                        <button className="button"> <Link>Criar Cadastro</Link></button>  
                     <label className="area">
                         <div className="area--tit"></div>
                     </label>
