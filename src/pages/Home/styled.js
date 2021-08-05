@@ -14,24 +14,17 @@ export const PageArea = styled.div`
 }
 
 button2 {
-    background-color:#F2994A;
-    padding:10px 10px;
-    border-radius:20px;
-    width: 300px;
-    color:#FFF;
-    font-size:15px;
-    cursor:pointer;
-    font-family:inter;
-    margin-top:20px;
+    
 }
 
 .area--leitura {
     text-align:center;
     font-weight:bold;
-    font-size:14px;
+    font-size:18px;
     font-family:inter;
-    font-size:20px;
-    align-items:center;
+    position:absolute;
+    float:center;
+   
 }
 
 button1 {
@@ -81,7 +74,6 @@ button1 {
 .imagem {
     display:table-cell;
     float:left;
-
     
 }
 

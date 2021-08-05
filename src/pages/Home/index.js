@@ -5,6 +5,9 @@ import Foto from './img/Home.jpg'
 import { Link } from 'react-router-dom';
 import Imagem from './img/Imagem.jpg';
 import Biblioteca from './img/Biblioteca.jpg';
+import Lendo from './img/Lendo.jpg';
+import Livros from './img/Livros.jpg';
+
 
 
 import { PageContainer1} from '../../components/MainComponents';
@@ -27,7 +30,7 @@ const Page = () => {
                     <div className="conteudo">
 
                     <div className="imagem">
-                        <img src={Biblioteca}/>
+                        <img src={Lendo}/>
                     </div>
 
                     <div className="texto">
@@ -43,7 +46,7 @@ const Page = () => {
                     </div>
 
 <br/>
-<br/>
+
                     <hr/>
 
                 </section>
@@ -53,7 +56,7 @@ const Page = () => {
                     <div className="conteudo2">
 
                     <div className="imagem2">
-                        <img src={Biblioteca}/>
+                        <img src={Livros}/>
                     </div>
 
                     <div className="texto2">
@@ -69,7 +72,7 @@ const Page = () => {
                     </div>
 
                     <br/>
-<br/>
+
                     <hr/>
 
                 </section>
@@ -105,7 +108,7 @@ const Page = () => {
             <img src={Imagem}/>
             </div>
             </div>    
-           {/* <Link to="/Livros">Livros</Link>*/}
+       
         
             </PageArea>
         </PageContainer1>
