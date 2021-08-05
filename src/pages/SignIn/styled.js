@@ -86,7 +86,7 @@ export const PageArea = styled.div`
 
     }
 
-    button1 {
+    .button1 {
         text-align:center;
         display:block;
         margin-left:auto;
@@ -107,7 +107,7 @@ export const PageArea = styled.div`
             background-color:#FF7F50;
     }
     }
-    button2 {
+    .button2 {
         text-align:center;
         display:block;
         margin-left:auto;

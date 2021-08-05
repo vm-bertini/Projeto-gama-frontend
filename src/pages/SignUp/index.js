@@ -1,6 +1,8 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { PageArea } from './styled';
 import useApi from '../../helpers/BookAPI';
+import { useLocation } from 'react-router';
+import queryString from "query-string"
 
 
 
@@ -8,6 +10,8 @@ import { PageContainer, PageTitle, ErrorMessage } from '../../components/MainCom
 
 const Page = () => {
     const api = useApi();
+    const {search} = useLocation()
+    const { api_error } = queryString.parse(search)
 
     const [name, setName] = useState('');
     const [userName, setUserName] = useState('');
@@ -18,16 +22,6 @@ const Page = () => {
     const [readerClassification, setreaderClassification] = useState('');
     const [disabled, setDisabled] = useState(false);
     const [error, setError] = useState('');
-
-    const [stateList, setStateList] = useState('');
-
-    useEffect(()=>{
-        const getStates = async () => {
-            const slist = await api.getStates();
-            setStateList(slist);
-        }
-        getStates();
-    }, []);
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -58,6 +52,9 @@ const Page = () => {
             <PageArea>
                 {error &&
                     <ErrorMessage>{error}</ErrorMessage>
+                }
+                {api_error &&
+                    <ErrorMessage>{api_error}</ErrorMessage>
                 }
                 <form onSubmit={handleSubmit}>
                 <label className="area">
@@ -141,7 +138,7 @@ const Page = () => {
                     <label className="area">
                         <div className="area--title"></div>
                         <div className="area--input">
-                        <a href="../livros" target="_parent"><button1 disabled={disabled}>Criar Cadastro</button1></a>    
+                        <a href="../livros" target="_parent" className="button"><button className="button">Criar Cadastro</button></a>    
                     <label className="area">
                         <div className="area--tit"></div>
                     </label>

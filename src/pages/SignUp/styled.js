@@ -120,7 +120,7 @@ export const PageArea = styled.div`
         padding:2px 2px;
     }
 
-    button1 {
+    .button {
         text-align:center;
         display:block;
         margin-left:auto;
@@ -128,6 +128,7 @@ export const PageArea = styled.div`
         background-color:#F2994A;
         border:0;
         outline:0;
+        text-decoration:none;
         padding:6px 10px;
         border-radius:20px;
         width: 370px;

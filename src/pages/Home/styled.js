@@ -13,7 +13,7 @@ export const PageArea = styled.div`
     color:#FFFFFF;
 }
 
-button2 {
+.button2 {
     background-color:#F2994A;
     padding:10px 10px;
     border-radius:20px;
@@ -34,7 +34,7 @@ button2 {
     align-items:center;
 }
 
-button1 {
+.button1 {
     text-align:center;
     position:absolute;
     top:50%;

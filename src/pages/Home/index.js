@@ -18,7 +18,7 @@ const Page = () => {
                 <div className="Foto">
                <div className="Foto--Inicial">
                    <img src={Foto}/>
-                <Link className="login"to="/signin"><button1>Começar</button1></Link>
+                <Link className="login"to="/signin"><button className="button1">Começar</button></Link>
                </div>
                </div>
 
@@ -97,7 +97,7 @@ const Page = () => {
                <div>
                <div className="leitura">
             <div className="area--leitura">Quero encontra minha próxima leitura!</div>
-            <Link className="login"to="/signin"><button2>Começar</button2></Link>
+            <Link className="login"to="/signin"><button className="button2">Começar</button></Link>
             </div>
             </div>
             <div className="Imagem">

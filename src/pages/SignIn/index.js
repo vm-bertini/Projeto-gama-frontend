@@ -68,14 +68,14 @@ const Page = () => {
                     <label className="area">
                         <div className="area--title"></div>
                         <div className="area--input">
-                            <button1 disabled={disabled}>Entrar</button1>      
+                            <button className="button1" disabled={disabled}>Entrar</button>      
                             <label className="area">
                         <div className="area--cadastre">Não possui conta ?</div>
                         </label>
                         <label className="area">
                         <div className="area--button"></div>
                         <div className="area--input">
-                        <a href="../signup" target="_parent"><button2 disabled={disabled} >Cadastre-se</button2></a>
+                        <a href="../signup" target="_parent"><button className="button2" type="button" disabled={disabled} >Cadastre-se</button></a>
                     </div>
                     <label className="area">
                         <div className="area--tit"></div>
