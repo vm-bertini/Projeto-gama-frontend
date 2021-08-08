@@ -6,6 +6,7 @@ export const Template = styled.div`
 
 export const PageContainer = styled.div`
     max-width:1000px;
+    height:auto;
     margin:auto;
 `;
 
