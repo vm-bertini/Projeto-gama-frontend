@@ -20,7 +20,7 @@ export const PageArea = styled.div`
     margin-left:auto;
     margin-right:auto;
     text-align:center;
-    width:67%;
+    margin-right:290px;
     padding:5px;
     font-weight:bold;
     font-size:14px;
@@ -32,7 +32,7 @@ export const PageArea = styled.div`
     margin-left:auto;
     margin-right:auto;
     text-align:center;
-    width:72%;
+    margin-right:250px;
     padding:5px;
     font-weight:bold;
     font-size:14px;
@@ -44,7 +44,7 @@ export const PageArea = styled.div`
     margin-left:auto;
     margin-right:auto;
     text-align:center;
-    width:74%;
+    margin-right:220px;
     padding:5px;
     font-weight:bold;
     font-size:14px;
@@ -157,4 +157,5 @@ export const PageArea = styled.div`
     }
 
 `;
+
 //

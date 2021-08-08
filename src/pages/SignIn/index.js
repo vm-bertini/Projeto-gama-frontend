@@ -34,13 +34,14 @@ const Page = () => {
     return(
         <PageContainer>
             <PageTitle>Faça seu login</PageTitle>
+            <br/>
             <PageArea>
                 {error &&
                     <ErrorMessage>{error}</ErrorMessage>
                 }
                 <form onSubmit={handleSubmit}>
                     <label className="area">
-                        <div className="area--title">E-mail</div>
+                        <div className="area--title">E-mail ou Usuário</div>
                         <div className="area--input">
                             <input  
                             disabled={disabled} 
@@ -52,7 +53,7 @@ const Page = () => {
                         <br/>
                     </label>
                     <label className="area">
-                        <div className="area--title">Senha</div>
+                        <div className="area--tittle">Senha</div>
                         <div className="area--input">
                             <input 
                             type="password" 

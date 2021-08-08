@@ -16,11 +16,11 @@ export const PageArea = styled.div`
 }
 
 .area--title {
-    display:block
+    display:block;
     margin-left:auto;
     margin-right:auto;
     text-align:center;
-    width:66%;
+    margin-right:220px;
     padding:5px;
     font-weight:bold;
     font-size:14px;
@@ -28,8 +28,20 @@ export const PageArea = styled.div`
 
 }
 
+.area--tittle {
+    display:block;
+    margin-left:auto;
+    margin-right:auto;
+    text-align:center;
+    margin-right:300px;
+    padding:5px;
+    font-weight:bold;
+    font-size:14px;
+    font-family:inter;
+}
+
 .area--tit {
-    display:block
+    display:block;
     margin-left:auto;
     margin-right:auto;
     text-align:center;
@@ -138,6 +150,10 @@ export const PageArea = styled.div`
     }
 
     }
+
+`;
+
+export const Section = styled.section`
 
 `;
 //

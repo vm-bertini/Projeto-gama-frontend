@@ -56,6 +56,7 @@ const Page = () => {
     return(
         <PageContainer>
             <PageTitle>Cadastro</PageTitle>
+            <br/>
             <PageArea>
                 {error &&
                     <ErrorMessage>{error}</ErrorMessage>

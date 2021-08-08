@@ -1,47 +1,51 @@
 import styled from 'styled-components';
+import Foto from './img/Home.jpg'
+import Image from './img/Imagem.jpg';
 
 export const PageArea = styled.div`
 
-* {
-    margin:0;
-    padding:0;
+.foto {
+    background-image: url(${Foto});
+    background-size: cover;
+    background-position: center center;
+    width: 100%;
+
+    height: 617px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
+
+
+.description {
+    margin-bottom: 5rem;
+}
+
+.description h1 {
+    font-size: 5rem;
+    color: #F2994A;
+    text-align: center;
+}
+
+.description p {
+    color: #FFF;
+    text-align: center;
+    font-size: 1.3rem;
+    text-align: center;
+}
+
 .leitura {
-    height:220px;
-    width:1584px;
+    height:250px;
     background-color:#3B2F93;
     color:#FFFFFF;
 }
 
-.button2 {
-    background-color:#F2994A;
-    padding:10px 10px;
-    border-radius:20px;
-    width: 300px;
-    color:#FFF;
-    font-size:15px;
-    cursor:pointer;
-    font-family:inter;
-    margin-top:20px;
-}
-
-.area--leitura {
+button2 {
     text-align:center;
-    font-weight:bold;
-    font-size:18px;
-    font-family:inter;
-    position:absolute;
-    float:center;
-   
-}
-
-.button1 {
-    text-align:center;
-    position:absolute;
-    top:50%;
-    left:50%;
-    transform:translate(-50%, 50%);
-    margin-top:150px;
+    margin:auto;
+    margin-left:auto;
     background-color:#F2994A;
     border:0;
     outline:0;
@@ -52,8 +56,42 @@ export const PageArea = styled.div`
     font-size:15px;
     cursor:pointer;
     font-family:inter;
-    align-items:center;
+    /* align-items:center; */
 
+    display: block;
+}
+}
+
+.area--leitura {
+    display:block;
+    padding:60px;
+    text-align:center;
+    font-weight:bold;
+    font-size:23px;
+    font-family:inter;
+   
+}
+
+button1 {
+    text-align:center;
+    /* position:absolute; */
+    /* top:50%; */
+    /* left:50%; */
+    /* transform:translate(-50%, 50%); */
+    /* margin-top:150px; */
+    background-color:#F2994A;
+    border:0;
+    outline:0;
+    padding:9px 10px;
+    border-radius:20px;
+    width: 220px;
+    color:#FFF;
+    font-size:15px;
+    cursor:pointer;
+    font-family:inter;
+    /* align-items:center; */
+
+    display: block;
 }
 
 .logo {
@@ -64,39 +102,39 @@ export const PageArea = styled.div`
 }
 
 
-.corpo {
+/* .corpo {
     margin:auto;
     width:400px;
     height:300px;
     padding-top:50px;
+} */
 
-
-
+.corpo {
+	display: flex;
+	align-items: center;
+	margin-top: 5rem;
+	justify-content: center;
 }
 
-.conteudo {
-    display:table;
-
+.corpo img {
+    border-radius: 10px;
 }
 
-.imagem {
-    display:table-cell;
-    float:left;
-    
+.revert {
+    /* flex-direction: row-reverse; */
+    border-radius: 1px solid red;
 }
 
-
+.revert .texto {
+    margin-left: 0;
+    margin-right: 6rem;
+}
 
 .texto {
-    display:table-cell;
-    position:absolute;
-    float:left;
     width:200px;
-    margin-top:40px;
-    margin-left:500px;
-    word-break: normal;
-    text-align:left;
-    
+    margin-left: 6rem;
+
+    word-break: normal;    
 }
 
 .texto3 {
@@ -129,11 +167,18 @@ export const PageArea = styled.div`
 .imagem2 {
     display:table-cell;
     float:right;
-    align-itemns:right;
-
-    
+    /* align-itemns:right; */
 }
 
+
+.Imagem {
+    background-image: url(${Image});
+    background-size: cover;
+    background-position: center center;
+    width: 100%;
+
+    height: 600px;
+}
 
 
 .texto2 {
@@ -147,7 +192,58 @@ export const PageArea = styled.div`
 }
 
 hr {
-    width:800px; 
-    
+    max-width: 1000px; 
+    margin: auto;
+    margin-top: 1rem;
 }
+
+.corRoxa {
+    color:#3B2F93;
+    font-size:30px;
+}
+
+.corLaranja {
+    color:#F2994A;
+    font-size:30px;
+}
+
+
+
+h2 {
+    width:240px;
+}
+
+
+
+
+`;
+
+export const Section = styled.section`
+	display: flex;
+	align-items: center;
+	margin-top: 1rem;
+    padding: 1rem 0;
+	justify-content: center;
+    flex-direction: ${props => props.revert ? 'row-reverse' : 'row'};
+    flex-wrap: wrap;
+
+    .texto {
+        width:200px;
+        margin-left: ${props => props.revert ? 0 : '6rem'};
+        margin-right: ${props => props.revert ? '6rem' : 0};
+        word-break: normal;    
+    };     
+
+    img {
+        border-radius: 10px;
+    }
+
+    @media (max-width: 630px) {
+    .texto {
+        width:200px;
+        margin-left: 0;
+        margin-right: 0;
+        word-break: normal;    
+    }; 
+  }
 `;

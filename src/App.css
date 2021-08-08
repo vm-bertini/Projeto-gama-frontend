@@ -2,11 +2,17 @@
 
 * {
   margin:0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: 0;
 }
 
-body {
+html, body {
+  height: 100vh;
   margin: 0;
   font-family: 'Inter', sans-serif;
   background-color: #FFFFFF;
 }
+
+
 

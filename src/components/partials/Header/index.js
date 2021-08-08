@@ -5,11 +5,13 @@ import { context } from '../../../pages/Context/context';
 import useApi from '../../../helpers/BookAPI'
 import { ErrorMessage } from '../../MainComponents'
 import Logo from './img/Logo.png'
+import Bonequinho from './img/Bonequinho.png'
 
 const Header = () => {
     const [error, setError] = useState('');
 
-    let cx = useContext(context);
+    //let cx = useContext(context);
+    let cx = true;
 
     const api = useApi()
 
@@ -44,13 +46,15 @@ const Header = () => {
                                 Olá, bem vindo(a) {cx.name}! 
                             </li>
                             <li>
-                                <Link className="conta"to="/my-account"> Minha Conta </Link>
+                                <Link className="conta"to="/my-account"> Sobre </Link>
                             </li>
                             <li>
-                                <Link className="button" to="/favorite">Favorito</Link>
+                                <Link className="navegar" to="/favorite">Navegar</Link>
                             </li>
                             <li onClick={handleDelete}>
-                                <Link className="sair"to="/">Sair</Link>
+                            <Link to="/">
+                            <span className="logo-2" to="/"><img src={Bonequinho}/></span>
+                            </Link>
                             </li>
                             </nav>
                             </>

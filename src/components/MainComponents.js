@@ -10,7 +10,7 @@ export const PageContainer = styled.div`
 `;
 
 export const PageContainer1 = styled.div`
-    max-width:1000px;
+    /* max-width:1000px; */
 `;
 
 export const PageContainer2 = styled.div`
@@ -42,5 +42,3 @@ export const ErrorMessage = styled.div`
     border:2px solid #FF0000;
     padding:10px;
 `;
-
-

@@ -2,6 +2,12 @@ import styled from 'styled-components';
 
 export const PageArea = styled.div`
 
+* {
+    text-align: center;
+    margin:auto;
+    text-decoration:none;
+}
+
 h1 {
     text-align:center;
     color:#3B2F93;
@@ -31,8 +37,9 @@ img {
 .botao1 {
     display:block;
     position:absolute;
-    float: right;
     margin-right:auto;
+    margin:auto;
+    margin-top:-50px;
     background-color:#3B2F93;
     border:0;
     outline:0;
@@ -44,7 +51,6 @@ img {
     cursor:pointer;
     font-family:Inter;
     text-align:center;
-    margin-left:negativa;
 
     &:hover {
         background-color:#483D8B;
@@ -54,9 +60,11 @@ img {
 .botao2 {
     display:block;
     position:absolute;
-    float: right;
+    text-align:center;
+    text-align:left;
+    left:70px;
     margin-right:auto;
-    background-color:#3B2F93;
+    background-color:#F2994A;
     border:0;
     outline:0;
     width:120px;
@@ -74,6 +82,37 @@ img {
 }
         
 }
+
+p {
+    font-size:15px; 
+    color:#3B2F93;
+}
+
+.box{
+    display: block; width: 260px; text-align: center;
+    position: relative; padding-top:20px; padding-bottom: 50px; float: left; margin: 0 5px;
+    bottom:20px;
+    background-color:#E7E4E4;
+    border-radius:15px;
+ }
+ 
+ .box::after{
+    content: '';
+    display: block;
+    width: 93%;
+    height: 93%;
+    position: absolute;
+    top: 3%; left: 3%;
+ }
+ 
+ .box p{
+    display: inline-block; padding: 0 10px;
+ }
+ 
+ .box img{
+    width: 70%;
+ }
+
 
 `;
 //
