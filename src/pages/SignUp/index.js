@@ -5,7 +5,6 @@ import { useHistory, useLocation } from 'react-router';
 
 
 
-
 import { PageContainer, PageTitle, ErrorMessage } from '../../components/MainComponents';
 
 const Page = () => {
@@ -117,6 +116,8 @@ const Page = () => {
                     <label className="area">
                         <div className="area--title">Senha</div>
                         <div className="area--input">
+                            <div>
+                                <img />
                             <input 
                             type="password" 
                             disabled={disabled}
@@ -124,6 +125,7 @@ const Page = () => {
                             onChange={e=>setPassword(e.target.value)} 
                             required
                         />
+                        </div>
                         </div>
                         <br/>
                     </label>
