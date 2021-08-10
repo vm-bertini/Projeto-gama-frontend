@@ -10,8 +10,8 @@ import Bonequinho from './img/Bonequinho.png'
 const Header = () => {
     const [error, setError] = useState('');
 
-    //let cx = useContext(context);
-    let cx = true;
+    let cx = useContext(context);
+    //let cx = true;
 
     const api = useApi()
 

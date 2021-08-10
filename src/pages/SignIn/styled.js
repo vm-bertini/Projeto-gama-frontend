@@ -76,6 +76,7 @@ export const PageArea = styled.div`
 
 .area--input {
     flex:1;
+    right:100px;
 
     input {
         display:block;
@@ -138,6 +139,10 @@ export const PageArea = styled.div`
 
         &:hover {
             background-color:#483D8B;  
+    }
+    .login-eye {
+        top:200px;
+        
     }
     }
      }
