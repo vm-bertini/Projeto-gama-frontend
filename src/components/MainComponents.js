@@ -8,8 +8,6 @@ export const PageContainer = styled.div`
     min-height:100vh;
     width:100%;
     margin:auto;
-    display:flex;
-    flex-direction: column;
     justify-content: start;
     align-items: center;
     text-align:center;

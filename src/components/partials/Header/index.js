@@ -33,14 +33,14 @@ const Header = () => {
             <div className="container">
                 <div className="logo">
                     <Link to="/">
-                        <span className="logo-1"><img src={Logo}/></span>
+                        <span className="logo-1"><img src={Logo} alt='Logo'/></span>
                     </Link>
                 </div>
                 <nav>
                     <ul>
                         {cx &&
                             <>
-                            <nav>
+                            <nav className='header'>
                             <li className="frase">
                                 Olá, bem vindo(a) {cx.name}! 
                             </li>
@@ -55,7 +55,7 @@ const Header = () => {
                             </li>
                             <li>
                             <Link to="/">
-                            <span className="logo-2" ><img src={Bonequinho}/></span>
+                            <span className="logo-2" ><img src={Bonequinho} alt='foto de perfil'/></span>
                             </Link>
                             </li>
                             </nav>

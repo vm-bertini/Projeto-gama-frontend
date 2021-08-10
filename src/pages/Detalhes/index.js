@@ -1,8 +1,6 @@
 import React, {useEffect, useState} from 'react';
-import { Link } from 'react-router-dom';
 import { useParams } from 'react-router';
 import useApi from '../../helpers/BookAPI';
-import {Teste} from './img/teste'
 import comprar from './img/comprar.jpg'
 import import_contacts from './img/import_contacts.png'
 import event_note from './img/event_note.png'
@@ -39,6 +37,7 @@ useEffect(() =>{
             </>}
             { json !== null &&
                 <>
+                <div className = 'content'>
                 <div className='book'>
                     <div className = 'cover' ><img src={json.image} alt={'Capa do livro: ' + json.title} /></div>
                     <div className='book_back'>
@@ -82,6 +81,8 @@ useEffect(() =>{
                             
                         </div>
                     </div>
+                </div>
+
                 </div>
             </>}
             </PageArea>

@@ -8,7 +8,6 @@ import Seta from './img/Seta.png'
 import import_contacts from './img/import_contacts.png'
 import event_note from './img/event_note.png'
 import Vector from './img/Vector.jpg'
-import {Teste} from './img/teste'
 
 const Page = () => {
 
