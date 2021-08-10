@@ -141,6 +141,13 @@ export const PageArea = styled.div`
         &:hover {
             background-color:#FF7F50;
     }
+    
+    .lnr-eye {
+        position: absolute;
+        top: 5px;
+        right: 10px;
+        cursor: pointer;
+    }
     }
     }
     }

@@ -71,7 +71,7 @@ const Page = () => {
             <form onSubmit ={handlesubmit}>
                 <section className="flex">
                 <div className="iniciante">
-                <a href="#" class="box">
+                <div className="box">
                 <img src={Iniciante} />
                 <h3>Iniciante</h3>
                 <p>É para aquelas que pessoas que amam ler, mas ainda são novas com essa prática
@@ -80,11 +80,11 @@ const Page = () => {
                 <h5>Média de páginas por dia: até 10.</h5>
                 <br/>
                 <button onClick={() => setreaderClassification(1)} className="botao2">Quero este!</button>
-                </a>
+                </div>
                 </div>
 
                 <div className="intermediario">
-                <a href="#" class="box">
+                <div className="box">
                 <img src={Intermediario} />
                 <h3>Intermediário</h3>
                 <p>É para você que gosta de ler, e tem um ritmo de leitura mais
@@ -93,11 +93,11 @@ const Page = () => {
                 <h5>Média de páginas por dia: entre 11 e 30.</h5>
                 <br/>
                 <button onClick={() => setreaderClassification(2)} className="botao2">Quero este!</button>
-                </a>
+                </div>
                 </div>
     
                 <div className="avançado">
-                <a href="#" class="box">
+                <div className="box">
                 <img src={Avançado} />
                 <h3>Avançado</h3>
                 <p>Para devoradores de livros, que conseguem ler um livro inteiro em um dia se precisar!
@@ -106,7 +106,7 @@ const Page = () => {
                 <h5>Média de páginas por dia: mais que 31.</h5>
                 <br/>
                 <button onClick={() => setreaderClassification(3)} className="botao2">Quero este!</button>
-                </a>
+                </div>
                 </div>
                    
                 </section>

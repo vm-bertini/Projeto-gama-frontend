@@ -88,7 +88,7 @@ p {
     color:#3B2F93;
 }
 
-.box{
+.box {
     display: block; width: 260px; text-align: center;
     position: relative; 
     padding-top:20px; 
@@ -99,11 +99,19 @@ p {
     background-color:#E7E4E4;
     border-radius:15px;
  }
-
  
- .box p{
+ .box p {
     display: inline-block; padding: 0 10px;
  }
+
+ .box h3 {
+     color:#3B2F93;
+ } 
+
+ .box h5 {
+    color:#3B2F93;
+    font-size:bold;
+} 
  
  .box img{
     width: 70%;
