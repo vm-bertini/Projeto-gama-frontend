@@ -20,11 +20,11 @@ export const PageArea = styled.div`
 
 
 .description {
-    margin-bottom: 5rem;
+    margin-bottom: 7rem;
 }
 
 .description h1 {
-    font-size: 5rem;
+    font-size: 7rem;
     color: #F2994A;
     text-align: center;
 }
