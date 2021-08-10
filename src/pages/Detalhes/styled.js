@@ -6,6 +6,17 @@ display: flex;
 justify-content: center;
 align-items: center;
 width: 90%;
+height: 100vh;
+
+.h1{
+
+    text-align: center;
+    position: relative;
+    left: 0px;
+    word-wrap:break-word;
+    color: #3B2F93;
+    width:500px;
+}
 
 .book{
     display: flex;
@@ -14,6 +25,7 @@ width: 90%;
     flex-direction: row;
     flex-wrap: wrap;
     width: 100%;
+    height: 100%;
     .book_back{
         display: flex;
         justify-content: center;
@@ -24,7 +36,6 @@ width: 90%;
         text-align: left;
         aspect-ratio:1;
         width:60%;
-        max-width:;
         border-radius: 15px;
         .book_info{
             display:flex;
@@ -40,12 +51,13 @@ width: 90%;
                 aspect-ratio: 450/100;
                 position: relative;
                 text-align: left;
-                margin-bottom: 5%;
+                margin-bottom: 2%;
                 h3{
                     color: #3B2F93;
                     width: 100%;
                     height: 45%;
-                    font-size: 2.254vw;
+                    font-size: 2vw;
+                    overflow: hidden ;
                     font-weight: normal;
                     margin-bottom: 3%;
                 }
@@ -60,16 +72,15 @@ width: 90%;
                 float: left;
                 color: #3B2F93;
                 font-weight:bold;
-                font-size: 3vw;
+                font-size: 2.5vw;
                 width: 45%;
+                margin-bottom: 5%;
+                margin-right: 1%;
                 aspect-ratio: 450/100;
                 position: relative;
-                margin-bottom:;                
-            }
-            @media(max-width:764px){
-                .title{
-                    font-size:6vw;
-                }
+                margin-bottom:; 
+                text-decoration: underline;
+                font-style: italic;              
             }
             .leituras{
                 display: flex;
@@ -85,11 +96,11 @@ width: 90%;
                     justify-content: left;
                     align-items: centre;
                     flex-direction: row;
-                    width:50%;
+                    width:100%;
                     height: 50%;
         
                     .img_template{
-                        width: 24%;
+                        width: 12%;
                         height: 100%; 
         
                         
@@ -97,16 +108,41 @@ width: 90%;
                     h4{
                         font-size: 1.832vw;;
                         color: #3B2F93;
-                        text-align: center;
+                        text-align: left;
                         width: 76%;
                         height: 100%;
+                        position: relative;
+                        #text{
+                            display:flex;
+                            flex-direction: row
+                        }
+                    }
+                    
+                }
+                
+                
+            }
+            @media(max-width:764px){
+                .leituras{
+                    .leitura{
+                        h4{
+                            font-size: 4vw;
+                        }
+                    }  
+                }
+                .info{
+                    h3{
+                        font-size: 3.4vw; 
+                    }
+                    h2{
+                        font-size: 2.9vw;
                     }
                 }
             }
 
             .text{
                 width: 45%;
-                aspect-ratio: 75/100;
+                aspect-ratio: 80/100;
             }
                 
             .sinopse-title{
@@ -114,18 +150,19 @@ width: 90%;
             width: 100%;
             height: 10%;
             font-size: 2.2vw;
+            margin-bottom: 5%;
             text-decoration: underline;
             
             }
 
             .sinopse{
                 display:flex;
-                width: 100%;
-                height:90%;
+                width: 90%;
+                height:85%;
                 overflow:auto;
-                font-size: 15px;
                 word-break: break-word;
                 color: #3B2F93;
+                font-size: 1.2vw;
             }
             .Autor-title{
                 
@@ -133,6 +170,7 @@ width: 90%;
                 width: 100%;
                 height: 10%;
                 font-size: 2.2vw;
+                margin-bottom: 5%;
                 text-decoration: underline;
                 
             }
@@ -146,6 +184,25 @@ width: 90%;
                 font-size: 15px;
                 word-break: break-word;
                 color: #3B2F93;
+                font-size: 1.2vw;
+            }
+
+            @media(max-width:764px){
+                .sinopse-title{
+                    font-size: 3.5vw;
+                }
+                .Autor-title{
+                    font-size: 3.5vw;
+                }
+                .sinopse{
+                    font-size: 3vw;
+                }
+                .Autor{
+                    font-size: 3vw;
+                }
+                .title{
+                    font-size: 3.5vw;
+                }
             }
             .button{
                 text-align: center;
@@ -155,16 +212,16 @@ width: 90%;
                     width: 100%;
                     height: 100%;
                 }
+                button{
+                    padding: 0;
+                    border: none;
+                    margin-top: 10%;
+                    background: none;
+                }
 
             }
             
         }
-    }
-    @media(max-width:764px){
-        .book_back{
-            width:100%;
-        }
-        
     }
     .cover{
         float: left;
@@ -177,9 +234,64 @@ width: 90%;
         img{
             border-radius: 25px;
             width: 100%;
-            aspect-ratio:1/2;
+            aspect-ratio:0.5;
             object-fit: cover;
         }
+    }
+}
+@media(max-width:764px){
+    width: 90%;
+    height: 100%;
+    .book{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 100%;
+        height: 100%;
+        .book_back{
+            width:100%;
+            .book_info{
+                display:flex;
+                flex-direction: column;
+                flex-wrap: wrap; 
+                position: relative;
+                text-align: left;
+                margin-top: 10vh;
+                width: 80%;
+                height: 100%;
+                .info{
+                    aspect-ratio: 3 ;
+                }
+                .title{
+                    aspect-ratio: 3 ;
+                }
+                .leituras{
+                    aspect-ratio: 3 ;
+                }
+                .text{
+                }
+                .button{
+                    aspect-ratio: 3 ;
+                }
+            }
+        }
+        
+        .cover{
+            width: 40%;
+            position: relative;
+            top: 10vh;
+            z-index:9;
+            border:none;
+            img{
+                border-radius: 25px;
+                width: 60%;
+                height:100%;
+                object-fit: cover;
+            }
+        }
+
     }
 }
 `;

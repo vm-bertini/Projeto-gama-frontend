@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from 'react'
 import { PageArea } from './styled';
-import {useHistory, useLocation, Link} from 'react-router-dom'
+import {useHistory, useLocation, Link, generatePath} from 'react-router-dom'
 import { PageContainer } from '../../components/MainComponents';
 import useApi from '../../helpers/BookAPI';
 
@@ -17,22 +17,28 @@ const Page = () => {
     const [Search, setSearch] = useState(undefined)
     const [filter, setfilter] = useState(undefined)
     const [typeFilter, settypeFilter] = useState(undefined)
-    const [json, setJson] = useState('')
-    const [json_t, setJson_t] = useState('fdgsdfg')
+    const [json, setJson] = useState([])
 
     const history = useHistory()
     const {search} = useLocation()
 
     useEffect(() => {
-        console.log('OI')
-        console.log(search)
         async function getdata(){
-            console.log(await api.navigation(search))
-            
+            const params = new URLSearchParams(search)
+            if( params.get('search') == null || params.get('search') == 'undefined'){
+                const data = await api.notitle(search).catch((error) => [])
+                
+                setJson(data)
+                
+            }
+            else{
+                const data = await api.withtitle(search).catch((error) => [])
+                setJson(data)
+                
+            }  
         }
         getdata()
-        setJson(Teste)
-    },[])
+    },[api, search])
 
 
     const handleFilters = (e)=>{
@@ -81,9 +87,16 @@ const Page = () => {
                     <select className='dropdown' onChange={event =>{setfilter(event.target.value)}} defaultValue={'DEFAULT'}>
                         <option value='DEFAULT' disabled className='dontshow'>Autores</option>
                         <option value="" ></option>
-                        <option value="tesla">Tesla</option>
-                        <option value="volvo">Volvo</option>
-                        <option value="mercedes">Mercedes</option>
+                        <option value="Neil Gaiman">Neil Gaiman</option>
+                        <option value="W. Timothy">W. Timothy</option>
+                        <option value="Tim Harford">Tim Harford</option>
+                        <option value="Benjamin Moser">Benjamin Moser</option>
+                        <option value="Gil do Vigor">Gil do Vigor</option>
+                        <option value="Dani Atkins">Dani Atkins</option>
+                        <option value="Victoria Aveyard">Victoria Aveyard</option>
+                        <option value="Guillherme del Toro e Cornelia Funke">Guillherme del Toro e Cornelia Funke</option>
+                        <option value="David Levithan">David Levithan</option>
+                        <option value="Wendy Leigh">Wendy Leigh</option>
                     </select>
                 </>}
                 {typeFilter == 1 && <>
@@ -91,8 +104,9 @@ const Page = () => {
                         <option value='DEFAULT' disabled className='dontshow'>Gêneros</option>
                         <option value="" ></option>
                         <option value="fantasia">fantasia</option>
-                        <option value="volvo">Volvo</option>
-                        <option value="mercedes">Mercedes</option>
+                        <option value="Auto-ajuda">Auto-ajuda</option>
+                        <option value="Biografia">Biografia</option>
+                        <option value="Romance">Romance</option>
                     </select>
                 </>}
                 {typeFilter === undefined && <>
@@ -104,11 +118,11 @@ const Page = () => {
             </div>
             </form>
             <div className='books'>
-               {json === 'error' &&
+               {json.length == [] &&
                <>
                <h1>Desculpe, nenhum livro com essas especificações foi encontrado </h1>
                </>}
-               {json !== '' && json !== 'error' &&
+               { json !== [] &&
                <>
                {json.map((json, key) => {
                    return (
@@ -118,12 +132,12 @@ const Page = () => {
                             {json.title}
                         </div>
                         <div className='info'>
-                            <h3>{json.author}</h3>
-                            <h2>{json.author}</h2>
+                            <h3>{json['Author.name']}</h3>
+                            <h2>{json['Genres.name']}</h2>
                         </div>
                         <div className='leitura'>
                             <img className ='img_template' src ={event_note} alt="Calendário" />
-                            <h4>{json.time} dias</h4>
+                            <h4>{json.time_to_read} dias</h4>
                             
                         </div>
                         <div className='leitura'>

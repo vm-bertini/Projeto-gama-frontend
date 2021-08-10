@@ -193,9 +193,13 @@ export const PageArea = styled.div`
             top: -40px;
             text-align: left;
             h3{
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
                 color: #3B2F93;
-                max-height: 20px;
-                overflow: hidden;
+                max-height: 35px;
+                overflow-x: hidden;
+                overflow-y: scroll;
                 margin-bottom: 5px;
                 font-size: 15px;
                 font-weight: normal;
