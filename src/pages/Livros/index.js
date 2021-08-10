@@ -92,7 +92,7 @@ const Page = () => {
                 </p>
                 <h5>Média de páginas por dia: entre 11 e 30.</h5>
                 <br/>
-                <button onClick={() => setreaderClassification(1)} className="botao2">Quero este!</button>
+                <button onClick={() => setreaderClassification(2)} className="botao2">Quero este!</button>
                 </a>
                 </div>
     
@@ -105,7 +105,7 @@ const Page = () => {
                 </p>
                 <h5>Média de páginas por dia: mais que 31.</h5>
                 <br/>
-                <button onClick={() => setreaderClassification(1)} className="botao2">Quero este!</button>
+                <button onClick={() => setreaderClassification(3)} className="botao2">Quero este!</button>
                 </a>
                 </div>
                    
