@@ -10,7 +10,6 @@ const Page = () => {
 
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
-    const [rememberPassword, setRememberPassword] = useState(false);
     const [disabled, setDisabled] = useState(false);
     const [error, setError] = useState('');
 
@@ -24,7 +23,7 @@ const Page = () => {
         if(json.error) {
             setError(json.error);
         } else {
-            window.location.href = '/'
+            window.location.href = '/navigation'
         }
 
         setDisabled(false);
@@ -34,13 +33,14 @@ const Page = () => {
     return(
         <PageContainer>
             <PageTitle>Faça seu login</PageTitle>
+            <br/>
             <PageArea>
                 {error &&
                     <ErrorMessage>{error}</ErrorMessage>
                 }
                 <form onSubmit={handleSubmit}>
                     <label className="area">
-                        <div className="area--title">E-mail</div>
+                        <div className="area--title">E-mail ou Usuário</div>
                         <div className="area--input">
                             <input  
                             disabled={disabled} 
@@ -52,7 +52,7 @@ const Page = () => {
                         <br/>
                     </label>
                     <label className="area">
-                        <div className="area--title">Senha</div>
+                        <div className="area--tittle">Senha</div>
                         <div className="area--input">
                             <input 
                             type="password" 

@@ -27,7 +27,7 @@ const Routes =  () => {
             <Route exact path='/navigation'>
                 <Navigation />
             </Route>
-            <Route exact path='/Detalhes/:livro'>
+            <Route exact path='/Detalhes/:id'>
                 <Detalhes/>
             </Route>
             <Route>

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { PageArea } from './styled';
+import { PageArea, Section } from './styled';
 import useApi from '../../helpers/BookAPI';
 import Foto from './img/Home.jpg'
 import { Link } from 'react-router-dom';
@@ -18,23 +18,25 @@ const Page = () => {
     return(
         <PageContainer1>
             <PageArea>
-                <div className="Foto">
-               <div className="Foto--Inicial">
-                   <img src={Foto}/>
-                <Link className="login"to="/signin"><button className="button1">Começar</button></Link>
+                <div className="foto">
+               <div className="description">
+                   <h1>Bookfolio</h1>
+
+                   <p>Encontre seu livro perfeito. Leia no seu tempo</p>
                </div>
+                <Link className="login"to="/signin"><button1>Começar</button1></Link>
                </div>
 
-                <section className="corpo">
-
-                    <div className="conteudo">
-
-                    <div className="imagem">
-                        <img src={Lendo}/>
+                <Section>
+                    <div>
+                        <img className="image" src={Lendo} alt="Lendo"/>
                     </div>
-
                     <div className="texto">
-                        <h2>1. Escolha seu nível de leitor(a)</h2>
+                        <h2>
+                        <span class="corRoxa">1</span>
+                        <span class="corLaranja">. </span>
+                        Escolha seu nível de leitor(a)
+                        </h2>
                         <br/>
                         <p>.Iniciante: Vamos devagar!</p>
                         
@@ -42,71 +44,60 @@ const Page = () => {
                         
                         <p>.Avançado: Devorador(a) de livros!</p>
                     </div>
+                </Section>
 
+
+                <hr />
+                <Section revert>
+
+                    <div>
+                        <img  className="imagem" src={Livros} alt="Books"/>
                     </div>
 
-<br/>
-
-                    <hr/>
-
-                </section>
-
-                <section className="corpo2">
-
-                    <div className="conteudo2">
-
-                    <div className="imagem2">
-                        <img src={Livros}/>
-                    </div>
-
-                    <div className="texto2">
-                        <h2>2. Encontre livros com seu perfil</h2>
-
+                    <div className="texto">
+                        <h2>
+                        <span class="corRoxa">2</span>
+                        <span class="corLaranja">. </span>
+                        Encontre livros com seu perfil
+                        </h2>
+                        <br/>
                         <p>Escolha por:</p>
                         <p>.Gênero</p>
                         <p>.Autor</p>
                         <p>.Tempo de leitura</p>
                         <p>.Número de páginas</p>
-                    </div>
 
                     </div>
 
-                    <br/>
+                </Section>
 
-                    <hr/>
 
-                </section>
-
-                <section className="corpo">
-
-                    <div className="conteudo">
-
-                    <div className="imagem">
-                        <img src={Biblioteca}/>
+                <hr />
+                <Section>
+                    <div>
+                        <img className="image" src={Biblioteca} alt="biblioteca" />
                     </div>
-
-                    <div className="texto3">
-                        <h2>3. Divirta-se</h2>
-
+                    <div className="texto">
+                        <h2>
+                        <span class="corRoxa">3</span>
+                        <span class="corLaranja">. </span>
+                            Divirta-se
+                        </h2>
+                        <br/>
                         <p>Indicamos onde adquirir seu livro!</p>
                     </div>
+                </Section>
 
-                    </div>
-
-
-
-                </section>
+<br/>
 
                <div>
                <div className="leitura">
             <div className="area--leitura">Quero encontra minha próxima leitura!</div>
-            <Link className="login"to="/signin"><button className="button2">Começar</button></Link>
+            <Link className="login"to="/signin"><button2>Começar</button2></Link>
             </div>
             </div>
             <div className="Imagem">
-            <div className="Foto--Imagem">
-            <img src={Imagem}/>
-            </div>
+            {/* <img src={Imagem}/> */}
             </div>    
        
         

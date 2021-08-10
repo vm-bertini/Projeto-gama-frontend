@@ -5,18 +5,25 @@ export const Template = styled.div`
 `;
 
 export const PageContainer = styled.div`
-    max-width:1000px;
-    height:auto;
+    min-height:100vh;
     margin:auto;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align:center;
+    
+
 `;
 
 export const PageContainer1 = styled.div`
-    max-width:1000px;
+    min-height:100vh;
 `;
 
 export const PageContainer2 = styled.div`
     max-width:1000px;
     margin:auto;
+    
 `;
 
 
@@ -43,5 +50,3 @@ export const ErrorMessage = styled.div`
     border:2px solid #FF0000;
     padding:10px;
 `;
-
-

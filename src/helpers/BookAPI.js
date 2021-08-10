@@ -77,12 +77,9 @@ const BookAPI = {
         const json = await apiFetchDel('/v1/logout/')
         return json
     },
-
-    getStates:async () => {
-        const json = await apiFetchGet(
-            '/states'
-        );
-        return json.states;
+    navigation:async (query) =>{
+        const json = await apiFetchGet('/v1/navigation'+query)
+        return json
     }
 };
 

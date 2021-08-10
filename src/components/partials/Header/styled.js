@@ -4,12 +4,33 @@ export const HeaderArea = styled.div`
 background-color:#3B2F93;
 height:98px;
 border-bottom:1px solid #CCC;
+width:100%;
 
 .container {
     max-width:1000px;
     margin:auto;
     display:flex;
 }
+
+.container img {
+    max-width:113px;
+    max-height:113px;
+    width: auto;
+    height: auto;
+    
+}
+
+.logo-2 img {
+    max-width:45px;
+    max-height:45px;
+    margin-top:-14px;
+
+}
+
+.navegar {
+    color:#F2994A;
+}
+
 
 a {
     text-decoration:none;
@@ -19,12 +40,15 @@ a {
     flex:1;
     display:flex;
     align-items:center;
-    height:98px;
+    height:108px;
 }
 
 nav {
+    overflow: hidden;
     padding-top:15px;
     padding-bottom:10px;
+    margin: auto;
+    width: auto;
     display:flex;
 
     ul, li {
@@ -40,10 +64,15 @@ nav {
 
     }
     .frase {
+        position: relative;
+        max-height: 50px;
+        top: -5px;
         color:#FFFFFF;
+        height:;
         font-size:14px;
         text-decoration:none;
-        line-leight:1px;
+        line-height:15px;
+        overflow: hidden;
         }
 
     .login {
@@ -97,6 +126,28 @@ button {
 
     &:hover {
         background-color:#FF7F50;
+}
+
+@media (max-width:600px) {
+    & {
+        height:auto;
+    }
+
+.container {
+    flex-direction: column;
+}
+
+.logo {
+    justificy-content:center;
+}
+
+nav ul {
+    flex-direction: column;
+    height:auto;
+}
+
+nav li {
+    margin:10px 20px;
 }
 
 

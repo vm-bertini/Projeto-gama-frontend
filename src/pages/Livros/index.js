@@ -65,49 +65,50 @@ const Page = () => {
             <PageArea>
         <section>
             <a href="../signup" target="_parent"><button className="botao1">Voltar</button></a>  
-            <h1 >Selecione o nível que você se identifica</h1>
+           <h1 >Selecione o nível que você se identifica</h1>
           </section>
-
+<br/>
             <form onSubmit ={handlesubmit}>
                 <section className="flex">
                 <div className="iniciante">
-                    <img src={Iniciante}/>
-                    <p>Iniciante</p>
-                    <p>É para aquela que pessoa que amam ler, mas ainda são novas com essas práticas
-                        e preferem ter mais tempo entre cada leitura.
-                    </p>
-                    <p>Média de páginas por dia: até 10.</p>
-                    <br/>
-                    <button onClick={() => setreaderClassification(1)} className="botao2">SELECIONAR!</button>
+                <a href="#" class="box">
+                <img src={Iniciante} />
+                <h3>Iniciante</h3>
+                <p>É para aquelas que pessoas que amam ler, mas ainda são novas com essa prática
+                e preferem ter mais tempo entre cada leitura.
+                </p>
+                <h5>Média de páginas por dia: até 10.</h5>
+                <br/>
+                <button onClick={() => setreaderClassification(1)} className="botao2">Quero este!</button>
+                </a>
                 </div>
-            
 
                 <div className="intermediario">
-                    <img src={Intermediario}/>
-                    <p>Intermediário</p>
-                    <p>É para você que gosta de ler, mas tem um ritmo de leitura
-                    rápido do que as outras pessoas, mas ainda assim não tem tanto tempo para ler!
-                    </p>
-                    <p>Média de páginas por dia: entre 11 e 30.</p>
-                    <br/>
-                    <button onClick={() => setreaderClassification(2)} className="botao2">SELECIONAR!</button>
+                <a href="#" class="box">
+                <img src={Intermediario} />
+                <h3>Intermediário</h3>
+                <p>É para você que gosta de ler, e tem um ritmo de leitura mais
+                rápido que outras pessoas, mas não tem tanto tempo para ler!
+                </p>
+                <h5>Média de páginas por dia: entre 11 e 30.</h5>
+                <br/>
+                <button onClick={() => setreaderClassification(1)} className="botao2">Quero este!</button>
+                </a>
                 </div>
-
+    
                 <div className="avançado">
-                    <img src={Avançado}/>
-                    <p>Avançado</p>
-                    <p>Para devoradores de livros que conseguem ler um livro inteiro em um dia se precisar!
-                        Amantes da literatura e dominam essa área.
-                    </p>
-                    <p>Média de páginas por dia: mais que 31.</p>
-                    <br/>
-                    <button onClick={() => setreaderClassification(3)} className="botao2">SELECIONAR</button>
-                    <br/>
-                    <br/>
-                    <br/>
-                    <br/>
+                <a href="#" class="box">
+                <img src={Avançado} />
+                <h3>Avançado</h3>
+                <p>Para devoradores de livros, que conseguem ler um livro inteiro em um dia se precisar!
+                Amantes da literatura e dominam essa área.
+                </p>
+                <h5>Média de páginas por dia: mais que 31.</h5>
+                <br/>
+                <button onClick={() => setreaderClassification(1)} className="botao2">Quero este!</button>
+                </a>
                 </div>
-        
+                   
                 </section>
             </form>
 
