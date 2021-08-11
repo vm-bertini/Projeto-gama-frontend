@@ -11,6 +11,7 @@ import Footer from './components/partials/Footer';
 
 import Routes from './Routes';
 
+
 const Page = (props) => {
   return (
     <BrowserRouter>

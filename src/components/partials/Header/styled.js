@@ -41,24 +41,46 @@ a {
 .logo {
     flex:1;
     display:flex;
-    margin-right: 50px; 
     align-items:center;
     height:108px;
+    position: absolute;
+    left: 7vw;
 }
 
 
         #icone{
-            mix-blend-mode: multiply;
             cursor: pointer;
             padding: 15px;
             position: absolute;
-            right: -15px ;
-            top: 5px;
+            align-items: center;
+            text-align: center;
+            right: 0px ;
+            top: 20px;
+            width: 30vw;
             z-index: 1;
+            -webkit-user-select: none;
+            -khtml-user-select: none;
+            -moz-user-select: none;
+            -o-user-select: none;
+            user-select: none;
+            -webkit-tap-highlight-color: transparent;
+            
             img{
-                height:50px;
+                height:30px;
+                filter: saturate(1);
+                -webkit-user-select: none;
+                -khtml-user-select: none;
+                -moz-user-select: none;
+                -o-user-select: none;
+                user-select: none;
+                -webkit-tap-highlight-color: transparent;
+            }
+            img:hover{
+                filter: saturate(5);
             }
         }
+
+         
         #check{
             display: none;
         }
@@ -68,18 +90,18 @@ a {
             background-color:  #E7E4E4;
             border: 1px solid #3B2F93;
             height: 250px;
-            width: 102px;
             position: absolute;
-            right: -1000px;
+            right: -500px;
             top:97px;
-            transition: all .5s linear;
+            transition: all .35s linear;
             z-index:6;
         }
 
         .avatar{
-            position:absolute;
-            right: 32%;
-            top: 34%;
+            position:relative;
+            top: 50%;
+            right: 0%;
+
         }
 
         nav{
@@ -93,7 +115,7 @@ a {
 
         nav li{
             list-style-type: none;
-            width: 100px;
+            width: 100%;
             height: 80px;
             text-align: center;
             border: 1px inset ;
@@ -105,8 +127,10 @@ a {
             
         }
 
-        #check:checked ~ .barra{
+        #check:checked ~.barra{
+            width: 30vw;
             right: 0;
+            display:block;
             top:97px;
         }
 
@@ -152,6 +176,8 @@ button {
     border:0;
     outline:0;
     padding:8px 10px;
+    position: absolute;
+    right: 0;
     border-radius:20px;
     width: 120px;
     color:#FFF;
@@ -172,6 +198,7 @@ button {
 
 .container {
     flex-direction: column;
+
 }
 
 .logo {

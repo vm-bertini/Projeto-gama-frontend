@@ -18,7 +18,9 @@ const Page = () => {
         setDisabled(true);
         setError('');
 
-        const json = await api.login(email, password);
+        const json = await api.login(email, password).catch((error) => {
+            window.location.href = '/navigation'
+        })
 
         if(json.error) {
             setError(json.error);

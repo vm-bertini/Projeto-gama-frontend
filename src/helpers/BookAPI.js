@@ -1,7 +1,8 @@
 import Cookies from 'js-cookie';
 import axios from "axios"
 
-const BASEAPI = 'http://localhost:3333';
+
+const BASEAPI = process.env.REACT_APP_SERVER;
 
 const apiFetchPost = async (endpoint, body) => {
     if(!body.token) {

@@ -5,7 +5,7 @@ import { context } from '../../../pages/Context/context';
 import useApi from '../../../helpers/BookAPI'
 import { ErrorMessage } from '../../MainComponents'
 import Logo from './img/Logo.png'
-import menu from './img/menu.jpg'
+import menu from './img/menu.png'
 import Bonequinho from './img/Bonequinho.png'
 
 const Header = () => {
@@ -40,7 +40,7 @@ const Header = () => {
                         {cx &&
                             <>
                             <input type='checkbox' id='check'></input>
-                            <label id='icone' for='check'><img src={menu}></img></label>
+                            <label id='icone' htmlFor='check'><img src={menu}></img></label>
                             <div className='barra'>
                                 <nav>
                                     <li>
