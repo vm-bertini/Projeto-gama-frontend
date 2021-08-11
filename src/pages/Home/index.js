@@ -24,17 +24,17 @@ const Page = () => {
 
                    <p>Encontre seu livro perfeito. Leia no seu tempo.</p>
                </div>
-                <Link className="login"to="/signin"><button1>Começar</button1></Link>
+                <Link className="login"to="/signin"><button className='button1'>Começar</button></Link>
                </div>
 
                 <Section>
                     <div>
-                        <img className="image" src={Lendo} alt="Lendo"/>
+                        <img className="mm" src={Lendo} alt="Lendo"/>
                     </div>
                     <div className="texto">
                         <h2>
-                        <span class="corRoxa">1</span>
-                        <span class="corLaranja">. </span>
+                        <span className="corRoxa">1</span>
+                        <span className="corLaranja">. </span>
                         Escolha seu nível de leitor(a)
                         </h2>
                         <br/>
@@ -51,13 +51,13 @@ const Page = () => {
                 <Section revert>
 
                     <div>
-                        <img  className="imagem" src={Livros} alt="Books"/>
+                        <img  className="mm" src={Livros} alt="Books"/>
                     </div>
 
                     <div className="texto">
                         <h2>
-                        <span class="corRoxa">2</span>
-                        <span class="corLaranja">. </span>
+                        <span className="corRoxa">2</span>
+                        <span className="corLaranja">. </span>
                         Encontre livros com seu perfil
                         </h2>
                         <br/>
@@ -75,12 +75,12 @@ const Page = () => {
                 <hr />
                 <Section>
                     <div>
-                        <img className="image" src={Biblioteca} alt="biblioteca" />
+                        <img  className= "mm" src={Biblioteca} alt="biblioteca" />
                     </div>
                     <div className="texto">
                         <h2>
-                        <span class="corRoxa">3</span>
-                        <span class="corLaranja">. </span>
+                        <span className="corRoxa">3</span>
+                        <span className="corLaranja">. </span>
                             Divirta-se
                         </h2>
                         <br/>
@@ -93,7 +93,7 @@ const Page = () => {
                <div>
                <div className="leitura">
             <div className="area--leitura">Quero encontra minha próxima leitura!</div>
-            <Link className="login"to="/signin"><button2>Começar</button2></Link>
+            <Link className="login"to="/signin"><button className='button2'>Começar</button></Link>
             </div>
             </div>
             <div className="Imagem">

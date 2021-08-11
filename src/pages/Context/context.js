@@ -12,7 +12,7 @@ const Store = ({children}) => {
         }).catch(err => {
         })
 
-    },[])
+    },[api])
 
 
     return (

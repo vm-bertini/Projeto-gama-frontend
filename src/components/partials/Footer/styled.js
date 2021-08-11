@@ -1,18 +1,20 @@
 import styled from 'styled-components';
 
 export const FooterArea = styled.div`
+min-height: 100%;
+height: auto !important;
+height: 100%;
+margin: 0 auto -100px;
 
-* {
-    margin:0;
-}
 
 .book {
     height:100px;
     background-color:#3B2F93;
-    display:block;
-    margin-left:auto;
-    margin-right:auto;
     color:#FFFFFF;
+    position:relative;
+    width:100%;
+    bottom:0;
+    
 }
 
 

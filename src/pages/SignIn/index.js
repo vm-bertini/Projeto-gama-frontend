@@ -11,7 +11,6 @@ const Page = () => {
 
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
-    const [rememberPassword, setRememberPassword] = useState(false);
     const [disabled, setDisabled] = useState(false);
     const [error, setError] = useState('');
 
@@ -25,7 +24,7 @@ const Page = () => {
         if(json.error) {
             setError(json.error);
         } else {
-            window.location.href = '/'
+            window.location.href = '/navigation'
         }
 
         setDisabled(false);

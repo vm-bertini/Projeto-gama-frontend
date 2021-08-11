@@ -5,18 +5,18 @@ import { context } from '../../../pages/Context/context';
 import useApi from '../../../helpers/BookAPI'
 import { ErrorMessage } from '../../MainComponents'
 import Logo from './img/Logo.png'
+import menu from './img/menu.jpg'
 import Bonequinho from './img/Bonequinho.png'
 
 const Header = () => {
     const [error, setError] = useState('');
 
     let cx = useContext(context);
-    //let cx = true;
 
     const api = useApi()
 
     const handleDelete = async ()=>{
-        const json = await api.logout();
+        const json = await api.logout()
 
         if(json.error) {
             setError(json.error);
@@ -34,40 +34,42 @@ const Header = () => {
             <div className="container">
                 <div className="logo">
                     <Link to="/">
-                        <span className="logo-1"><img src={Logo}/></span>
+                        <span className="logo-1"><img src={Logo} alt='Logo'/></span>
                     </Link>
                 </div>
-                <nav>
-                    <ul>
                         {cx &&
                             <>
-                            <nav>
-                            <li className="frase">
-                                Olá, bem vindo(a) {cx.name}! 
-                            </li>
-                            <li>
-                                <Link className="conta"to="/my-account"> Sobre </Link>
-                            </li>
-                            <li>
-                                <Link className="navegar" to="/favorite">Navegar</Link>
-                            </li>
-                            <li onClick={handleDelete}>
-                            <Link to="/">
-                            <span className="logo-2" to="/"><img src={Bonequinho}/></span>
-                            </Link>
-                            </li>
-                            </nav>
+                            <input type='checkbox' id='check'></input>
+                            <label id='icone' for='check'><img src={menu}></img></label>
+                            <div className='barra'>
+                                <nav>
+                                    <li>
+                                        Olá, bem vindo(a) {cx.name}! 
+                                    </li>
+                                    <li>
+                                        <Link to="/">
+                                            <span className="logo-2" ><img src={Bonequinho} className='avatar' alt='foto de perfil'/></span>
+                                        </Link>
+                                    </li>
+                                    
+                                    <li>
+                                        <Link className="navegar" to="/navigation">Navegar</Link>
+                                    </li>
+                                    <li>
+                                        <Link className="conta"to="/"> Sobre </Link>
+                                    </li>
+                                    <li onClick={handleDelete}>
+                                        <Link className="navegar" to="/">sair</Link>
+                                    </li>
+                                </nav>
+                            </div>
                             </>
                         }
                         {!cx &&
                             <>
-                            <li>
                                 <Link className="login"to="/signin"><button>Fazer login</button></Link>
-                            </li>
                             </>
                         }
-                    </ul>
-                    </nav>
             </div>
         </HeaderArea>
     );
