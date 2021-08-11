@@ -93,8 +93,8 @@ export const PageArea = styled.div`
         display:block;
         margin-left:auto;
         margin-right:auto;
-        width:50%;
-        width: 364px;
+        width:100%;
+        max-width: 364px;
         font-size:14px;
         padding:10px;
         border: 1px solid #DDD;
@@ -131,7 +131,8 @@ export const PageArea = styled.div`
         text-decoration:none;
         padding:6px 10px;
         border-radius:20px;
-        width: 370px;
+        width: 100%;
+        max-width: 364px;
         color:#FFF;
         font-size:15px;
         cursor:pointer;

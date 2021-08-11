@@ -40,24 +40,28 @@ const Header = () => {
                     <ul>
                         {cx &&
                             <>
-                            <nav className='header'>
-                            <li className="frase">
-                                Olá, bem vindo(a) {cx.name}! 
-                            </li>
-                            <li>
-                                <Link className="conta"to="/"> Sobre </Link>
-                            </li>
-                            <li>
-                                <Link className="navegar" to="/navigation">Navegar</Link>
-                            </li>
-                            <li onClick={handleDelete}>
-                            <Link className="navegar" to="/">sair</Link>
-                            </li>
+                            <nav>
                             <li>
                             <Link to="/">
                             <span className="logo-2" ><img src={Bonequinho} alt='foto de perfil'/></span>
                             </Link>
                             </li>
+                            <li onClick={handleDelete}>
+                            <Link className="navegar" to="/">sair</Link>
+                            </li>
+                            <li>
+                                <Link className="navegar" to="/navigation">Navegar</Link>
+                            </li>
+                            <li>
+                                <Link className="conta"to="/"> Sobre </Link>
+                            </li>
+                            <li className="frase">
+                                Olá, bem vindo(a) {cx.name}! 
+                            </li>
+                            
+                            
+                            
+                            
                             </nav>
                             </>
                         }

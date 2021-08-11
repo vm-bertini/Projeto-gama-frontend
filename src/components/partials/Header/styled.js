@@ -10,6 +10,7 @@ width:100%;
     max-width:1000px;
     margin:auto;
     display:flex;
+    overflow: hidden;
 }
 
 .container img {
@@ -50,6 +51,7 @@ nav {
     margin: auto;
     width: auto;
     display:flex;
+    flex-direction: row-reverse;
 
     ul, li {
         margin:5px;
@@ -61,6 +63,7 @@ nav {
         align-items:center
         height:5px;
         line-height:5px;
+        width: 100%;
 
     }
     .frase {

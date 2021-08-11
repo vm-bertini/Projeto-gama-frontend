@@ -4,6 +4,10 @@ import Image from './img/Imagem.jpg';
 
 export const PageArea = styled.div`
 
+.mm{
+    width: 100%;
+}
+
 .foto {
     background-image: url(${Foto});
     background-size: cover;
@@ -20,13 +24,22 @@ export const PageArea = styled.div`
 
 
 .description {
+    width:100%;
     margin-bottom: 5rem;
+    overflow-wrap:normal ;
 }
 
 .description h1 {
-    font-size: 5rem;
+    font-size: 100px;
     color: #F2994A;
     text-align: center;
+}
+@media(max-width: 764px){
+    .description h1 {
+        font-size: 14vw;
+        color: #F2994A;
+        text-align: center;
+    }
 }
 
 .description p {
@@ -37,12 +50,14 @@ export const PageArea = styled.div`
 }
 
 .leitura {
-    height:250px;
+    height:25vh;
     background-color:#3B2F93;
     color:#FFFFFF;
+    width: 100%;
 }
 
-button2 {
+
+.button2 {
     text-align:center;
     margin:auto;
     margin-left:auto;
@@ -50,8 +65,10 @@ button2 {
     border:0;
     outline:0;
     padding:9px 10px;
-    border-radius:20px;
-    width: 220px;
+    border-radius:20px;    
+    width: 40vw;
+    max-width:220px;
+    margin-top: 5vh;
     color:#FFF;
     font-size:15px;
     cursor:pointer;
@@ -63,16 +80,19 @@ button2 {
 }
 
 .area--leitura {
-    display:block;
-    padding:60px;
+    display:flex;
+    justify-content: start;
+    flex-direction: column;
     text-align:center;
     font-weight:bold;
-    font-size:23px;
+    font-size: 4vh;
     font-family:inter;
+    width: 100%;
+    height: 50%;
    
 }
 
-button1 {
+.button1 {
     text-align:center;
     /* position:absolute; */
     /* top:50%; */
@@ -84,7 +104,8 @@ button1 {
     outline:0;
     padding:9px 10px;
     border-radius:20px;
-    width: 220px;
+    width: 40vw;
+    max-width:220px;
     color:#FFF;
     font-size:15px;
     cursor:pointer;
@@ -210,7 +231,7 @@ hr {
 
 
 h2 {
-    width:240px;
+    width:100%;
 }
 
 
@@ -223,15 +244,21 @@ export const Section = styled.section`
 	align-items: center;
 	margin-top: 1rem;
     padding: 1rem 0;
+    max-width:50%;
+    margin:auto;
 	justify-content: center;
     flex-direction: ${props => props.revert ? 'row-reverse' : 'row'};
     flex-wrap: wrap;
 
     .texto {
-        width:200px;
-        margin-left: ${props => props.revert ? 0 : '6rem'};
-        margin-right: ${props => props.revert ? '6rem' : 0};
-        word-break: normal;    
+        margin:auto;
+        display:flex;
+        flex-direction:column;
+        word-break: normal;  
+        align-self: center;
+        p{
+            text-align:left;
+        }  
     };     
 
     img {
@@ -240,7 +267,7 @@ export const Section = styled.section`
 
     @media (max-width: 630px) {
     .texto {
-        width:200px;
+        width:100%;
         margin-left: 0;
         margin-right: 0;
         word-break: normal;    
