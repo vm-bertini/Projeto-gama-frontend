@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { PageArea } from './styled';
-import useApi from '../../helpers/BookAPI';
 import { useHistory, useLocation } from 'react-router';
 
 
@@ -8,7 +7,6 @@ import { useHistory, useLocation } from 'react-router';
 import { PageContainer, PageTitle, ErrorMessage } from '../../components/MainComponents';
 
 const Page = () => {
-    const api = useApi();
     const history = useHistory()
     const location = useLocation()
 
@@ -117,7 +115,7 @@ const Page = () => {
                         <div className="area--title">Senha</div>
                         <div className="area--input">
                             <div>
-                                <img />
+                                <img alt=''/>
                             <input 
                             type="password" 
                             disabled={disabled}

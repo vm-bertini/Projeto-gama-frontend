@@ -7,22 +7,28 @@ import { ErrorMessage } from '../../MainComponents'
 import Logo from './img/Logo.png'
 import menu from './img/menu.png'
 import Bonequinho from './img/Bonequinho.png'
+import Cookie from 'js-cookie'
 
 const Header = () => {
-    const [error, setError] = useState('');
+    const [error] = useState('');
 
-    let cx = useContext(context);
+    
+    const cx = useContext(context);
+    
 
     const api = useApi()
 
     const handleDelete = async ()=>{
-        const json = await api.logout()
-
-        if(json.error) {
-            setError(json.error);
-        } else {
+        await api.logout()
+        .then(res => {
+            Cookie.remove("status")
             window.location.href = '/'
-        }
+        }).catch((error) => {
+            window.location.href = '/' 
+        })
+
+        
+            
     }
 
 
@@ -37,11 +43,13 @@ const Header = () => {
                         <span className="logo-1"><img src={Logo} alt='Logo'/></span>
                     </Link>
                 </div>
-                        {cx &&
+                        {Cookie.get('status') == 'Logado' &&
                             <>
                             <input type='checkbox' id='check'></input>
-                            <label id='icone' htmlFor='check'><img src={menu}></img></label>
-                            <div className='barra'>
+                            <label id='icone' htmlFor='check'><img src={menu} alt='menu'></img></label>
+                            {cx && 
+                            <>
+                                <div className='barra'>
                                 <nav>
                                     <li>
                                         Olá, bem vindo(a) {cx.name}! 
@@ -59,13 +67,15 @@ const Header = () => {
                                         <Link className="conta"to="/"> Sobre </Link>
                                     </li>
                                     <li onClick={handleDelete}>
-                                        <Link className="navegar" to="/">sair</Link>
+                                        <Link className="navegar">sair</Link>
                                     </li>
                                 </nav>
                             </div>
                             </>
+                            }
+                            </>
                         }
-                        {!cx &&
+                        {Cookie.get('status') == undefined &&
                             <>
                                 <Link className="login"to="/signin"><button>Fazer login</button></Link>
                             </>

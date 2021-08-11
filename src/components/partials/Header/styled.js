@@ -56,7 +56,7 @@ a {
             text-align: center;
             right: 0px ;
             top: 20px;
-            width: 30vw;
+            width: 10vw;
             z-index: 1;
             -webkit-user-select: none;
             -khtml-user-select: none;
@@ -89,7 +89,7 @@ a {
             
             background-color:  #E7E4E4;
             border: 1px solid #3B2F93;
-            height: 250px;
+            height: 225px;
             position: absolute;
             right: -500px;
             top:97px;
@@ -107,6 +107,7 @@ a {
         nav{
             display: flex;
             flex-direction: column;
+            overflow: hidden;
             width: 100%;
             height: 100%;
             position: absolute;
@@ -114,12 +115,15 @@ a {
         }
 
         nav li{
+            position: relative;
             list-style-type: none;
             width: 100%;
-            height: 80px;
+            height: 45px;
             text-align: center;
             border: 1px inset ;
             color: #3B2F93;
+            overflow: hidden;
+            
         }
 
         nav li a{
@@ -128,7 +132,7 @@ a {
         }
 
         #check:checked ~.barra{
-            width: 30vw;
+            width: 10vw;
             right: 0;
             display:block;
             top:97px;

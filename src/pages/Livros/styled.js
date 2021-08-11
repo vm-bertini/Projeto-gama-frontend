@@ -22,14 +22,15 @@ img {
     display:block;
 }
 
+
 .flex {
     display:flex;
     flex-wrap:wrap;
+    justify-content: center;
 
 }
 
 .flex > div {
-    flex: 1 1 200px;
     margin:15px;
 }
 
@@ -40,7 +41,6 @@ img {
     margin-right:auto;
     margin:auto;
     margin-top:-50px;
-    background-color:#3B2F93;
     border:0;
     outline:0;
     width:70px;
@@ -51,9 +51,10 @@ img {
     cursor:pointer;
     font-family:Inter;
     text-align:center;
+    transform: scaleX(-1);
 
     &:hover {
-        background-color:#483D8B;
+        filter: saturate(3)
 }
 }
 

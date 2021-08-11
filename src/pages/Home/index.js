@@ -1,9 +1,6 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { PageArea, Section } from './styled';
-import useApi from '../../helpers/BookAPI';
-import Foto from './img/Home.jpg'
 import { Link } from 'react-router-dom';
-import Imagem from './img/Imagem.jpg';
 import Biblioteca from './img/Biblioteca.jpg';
 import Lendo from './img/Lendo.jpg';
 import Livros from './img/Livros.jpg';
@@ -13,8 +10,6 @@ import Livros from './img/Livros.jpg';
 import { PageContainer1} from '../../components/MainComponents';
 
 const Page = () => {
-    const api = useApi();
-
     return(
         <PageContainer1>
             <PageArea>

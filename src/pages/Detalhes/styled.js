@@ -235,7 +235,9 @@ export const PageArea = styled.div`
             }
         }
     }
+    
 }
+
 @media(max-width:764px){
     .content{
         width: 100%;
@@ -291,6 +293,28 @@ export const PageArea = styled.div`
 
     }
     }
+}
+.botao1 {
+    display:block;
+    position:absolute;
+    margin-right:auto;
+    margin:auto;
+    top: 160px;
+    margin-top:-50px;
+    border:0;
+    outline:0;
+    width:70px;
+    padding:10px 10px;
+    border-radius:20px;
+    color:#FFF;
+    font-size:15px;
+    cursor:pointer;
+    font-family:Inter;
+    text-align:center;
+    transform: scaleX(-1);
+
+    &:hover {
+        filter: saturate(3)
 }
 `;
 //

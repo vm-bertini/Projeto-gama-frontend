@@ -6,6 +6,7 @@ import import_contacts from './img/import_contacts.png'
 import event_note from './img/event_note.png'
 import { PageContainer } from '../../components/MainComponents';
 import { PageArea } from './styled';
+import seta from './img/Seta.png'
 
 
 
@@ -33,13 +34,15 @@ useEffect(() =>{
             <PageArea>
             {json == null &&
             <>
-            <h1 className ='h1'>Desculpe, nenhum livro com essas especificações foi encontrado </h1>
             </>}
             { json !== null &&
                 <>
+                <div><img onClick={() =>{window.history.back()}} className='botao1' src ={seta} alt="Calendário" /></div>
                 <div className = 'content'>
                 <div className='book'>
-                    <div className = 'cover' ><img src={json.image} alt={'Capa do livro: ' + json.title} /></div>
+                    <div className = 'cover' >
+                        <img src={json.image} alt={'Capa do livro: ' + json.title} />
+                    </div>
                     <div className='book_back'>
                         <div className='book_info'>
                             <div className='title'>
@@ -76,14 +79,14 @@ useEffect(() =>{
                                 </div>
                             </div>
                             <div className='button'>
-                                <button onClick={handleredirect}><img src= {comprar} className='comprar'></img></button>
+                                <button onClick={handleredirect}><img src= {comprar} alt='comprar' className='comprar'></img></button>
                             </div>
                             
                         </div>
                     </div>
                 </div>
-
                 </div>
+                
             </>}
             </PageArea>
         </PageContainer>

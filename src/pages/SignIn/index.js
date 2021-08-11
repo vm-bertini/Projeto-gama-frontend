@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { PageArea } from './styled';
 import useApi from '../../helpers/BookAPI';
+import Cookie from 'js-cookie'
 
 
 
@@ -20,12 +21,13 @@ const Page = () => {
         setError('');
 
         const json = await api.login(email, password).catch((error) => {
-            window.location.href = '/navigation'
+            window.location.href = '/signin'
         })
 
         if(json.error) {
             setError(json.error);
         } else {
+            Cookie.set('status', "Logado")
             window.location.href = '/navigation'
         }
 

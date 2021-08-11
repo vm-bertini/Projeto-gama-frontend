@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from 'react'
 import { PageArea } from './styled';
-import {useHistory, useLocation, Link, generatePath} from 'react-router-dom'
+import {useHistory, useLocation, Link} from 'react-router-dom'
 import { PageContainer } from '../../components/MainComponents';
 import useApi from '../../helpers/BookAPI';
 
@@ -24,6 +24,7 @@ const Page = () => {
     useEffect(() => {
         async function getdata(){
             const params = new URLSearchParams(search)
+            
             if( params.get('search') == null || params.get('search') == 'undefined'){
                 const data = await api.notitle(search).catch((error) => [])
                 
@@ -119,7 +120,6 @@ const Page = () => {
             <div className='books'>
                {json.length == [] &&
                <>
-               <h1>Desculpe, nenhum livro com essas especificações foi encontrado </h1>
                </>}
                { json !== [] &&
                <>

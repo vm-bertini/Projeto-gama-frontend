@@ -5,6 +5,7 @@ import Iniciante from './img/Iniciante.jpg';
 import Intermediario from './img/Intermediario.jpg';
 import Avançado from './img/Avançado.jpg';
 import { useLocation, useHistory } from 'react-router';
+import seta from './img/Seta.png'
 
 
 import { PageContainer } from '../../components/MainComponents';
@@ -64,7 +65,7 @@ const Page = () => {
         <PageContainer>
             <PageArea>
         <section>
-            <a href="../signup" target="_parent"><button className="botao1">Voltar</button></a>  
+           <img onClick={() =>{window.history.back()}} className='botao1' src ={seta} alt="imagem" />
            <h1 >Selecione o nível que você se identifica</h1>
           </section>
 <br/>
@@ -72,7 +73,7 @@ const Page = () => {
                 <section className="flex">
                 <div className="iniciante">
                 <div className="box">
-                <img src={Iniciante} />
+                <img src={Iniciante} alt="imagem" />
                 <p></p>
                 <h3>Iniciante</h3>
                 <p></p>
@@ -87,7 +88,7 @@ const Page = () => {
 
                 <div className="intermediario">
                 <div className="box">
-                <img src={Intermediario} />
+                <img src={Intermediario} alt="imagem" />
                 <p></p>
                 <h3>Intermediário</h3>
                 <p></p>
@@ -102,7 +103,7 @@ const Page = () => {
     
                 <div className="avançado">
                 <div className="box">
-                <img src={Avançado} />
+                <img src={Avançado}  alt="imagem"/>
                 <p></p>
                 <h3>Avançado</h3>
                 <p></p>

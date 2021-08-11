@@ -258,6 +258,23 @@ export const PageArea = styled.div`
                 width: 100%;
             }
         }
+        @media(max-width:305px){
+            .button{
+                display: flex;
+                overflow: hidden;
+                flex-direction: row;
+                flex-wrap: wrap;
+                float: left;
+                margin: 0px 0px 0px px;
+                color: #3B2F93;
+                font-size: 18px;
+                height: 25px;
+                position: absolute;
+                top: 170px;
+                left: 210px;
+                text-align: center;
+            }
+        }
         
     }
 }
