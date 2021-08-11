@@ -6,9 +6,10 @@ height:98px;
 border-bottom:1px solid #CCC;
 width:100%;
 
+
+
 .container {
     max-width:1000px;
-    margin:auto;
     display:flex;
     overflow: hidden;
 }
@@ -22,8 +23,8 @@ width:100%;
 }
 
 .logo-2 img {
-    max-width:45px;
-    max-height:45px;
+    max-width:30px;
+    max-height:30px;
     margin-top:-14px;
 
 }
@@ -40,49 +41,82 @@ a {
 .logo {
     flex:1;
     display:flex;
+    margin-right: 50px; 
     align-items:center;
     height:108px;
 }
 
-nav {
-    overflow: hidden;
-    padding-top:15px;
-    padding-bottom:10px;
-    margin: auto;
-    width: auto;
-    display:flex;
-    flex-direction: row-reverse;
 
-    ul, li {
-        margin:5px;
-        padding:5px;
-        list-style:none;
-    }
+        #icone{
+            mix-blend-mode: multiply;
+            cursor: pointer;
+            padding: 15px;
+            position: absolute;
+            right: -15px ;
+            top: 5px;
+            z-index: 1;
+            img{
+                height:50px;
+            }
+        }
+        #check{
+            display: none;
+        }
 
-    ul {
-        align-items:center
-        height:5px;
-        line-height:5px;
-        width: 100%;
+        .barra{
+            
+            background-color:  #E7E4E4;
+            border: 1px solid #3B2F93;
+            height: 250px;
+            width: 102px;
+            position: absolute;
+            right: -1000px;
+            top:97px;
+            transition: all .5s linear;
+            z-index:6;
+        }
 
-    }
-    .frase {
-        position: relative;
-        max-height: 50px;
-        top: -5px;
-        color:#FFFFFF;
-        height:;
-        font-size:14px;
-        text-decoration:none;
-        line-height:15px;
-        overflow: hidden;
+        .avatar{
+            position:absolute;
+            right: 32%;
+            top: 34%;
+        }
+
+        nav{
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            right: 0px;
+        }
+
+        nav li{
+            list-style-type: none;
+            width: 100px;
+            height: 80px;
+            text-align: center;
+            border: 1px inset ;
+            color: #3B2F93;
+        }
+
+        nav li a{
+            transition: all .2s linear;
+            
+        }
+
+        #check:checked ~ .barra{
+            right: 0;
+            top:97px;
         }
 
     .login {
         color:#FFFFFF;
         font-size:11px;
         text-decoration:none;
-}
+        position: absolute;
+        right: 20px;
+        top: 33px;
 
 
 logged {

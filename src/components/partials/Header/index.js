@@ -5,6 +5,7 @@ import { context } from '../../../pages/Context/context';
 import useApi from '../../../helpers/BookAPI'
 import { ErrorMessage } from '../../MainComponents'
 import Logo from './img/Logo.png'
+import menu from './img/menu.jpg'
 import Bonequinho from './img/Bonequinho.png'
 
 const Header = () => {
@@ -36,44 +37,39 @@ const Header = () => {
                         <span className="logo-1"><img src={Logo} alt='Logo'/></span>
                     </Link>
                 </div>
-                <nav>
-                    <ul>
                         {cx &&
                             <>
-                            <nav>
-                            <li>
-                            <Link to="/">
-                            <span className="logo-2" ><img src={Bonequinho} alt='foto de perfil'/></span>
-                            </Link>
-                            </li>
-                            <li onClick={handleDelete}>
-                            <Link className="navegar" to="/">sair</Link>
-                            </li>
-                            <li>
-                                <Link className="navegar" to="/navigation">Navegar</Link>
-                            </li>
-                            <li>
-                                <Link className="conta"to="/"> Sobre </Link>
-                            </li>
-                            <li className="frase">
-                                Olá, bem vindo(a) {cx.name}! 
-                            </li>
-                            
-                            
-                            
-                            
-                            </nav>
+                            <input type='checkbox' id='check'></input>
+                            <label id='icone' for='check'><img src={menu}></img></label>
+                            <div className='barra'>
+                                <nav>
+                                    <li>
+                                        Olá, bem vindo(a) {cx.name}! 
+                                    </li>
+                                    <li>
+                                        <Link to="/">
+                                            <span className="logo-2" ><img src={Bonequinho} className='avatar' alt='foto de perfil'/></span>
+                                        </Link>
+                                    </li>
+                                    
+                                    <li>
+                                        <Link className="navegar" to="/navigation">Navegar</Link>
+                                    </li>
+                                    <li>
+                                        <Link className="conta"to="/"> Sobre </Link>
+                                    </li>
+                                    <li onClick={handleDelete}>
+                                        <Link className="navegar" to="/">sair</Link>
+                                    </li>
+                                </nav>
+                            </div>
                             </>
                         }
                         {!cx &&
                             <>
-                            <li>
                                 <Link className="login"to="/signin"><button>Fazer login</button></Link>
-                            </li>
                             </>
                         }
-                    </ul>
-                    </nav>
             </div>
         </HeaderArea>
     );
