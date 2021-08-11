@@ -74,8 +74,11 @@ export const PageArea = styled.div`
     cursor:pointer;
     font-family:inter;
     /* align-items:center; */
-
     display: block;
+
+    &:hover {
+        background-color:#FF7F50;
+}
 }
 }
 
@@ -111,8 +114,11 @@ export const PageArea = styled.div`
     cursor:pointer;
     font-family:inter;
     /* align-items:center; */
-
     display: block;
+
+    &:hover {
+        background-color:#FF7F50;
+}
 }
 
 .logo {
@@ -234,6 +240,9 @@ h2 {
     width:100%;
 }
 
+section p {
+    width:265px;
+}
 
 
 

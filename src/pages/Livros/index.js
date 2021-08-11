@@ -73,7 +73,9 @@ const Page = () => {
                 <div className="iniciante">
                 <div className="box">
                 <img src={Iniciante} />
+                <p></p>
                 <h3>Iniciante</h3>
+                <p></p>
                 <p>É para aquelas que pessoas que amam ler, mas ainda são novas com essa prática
                 e preferem ter mais tempo entre cada leitura.
                 </p>
@@ -86,7 +88,9 @@ const Page = () => {
                 <div className="intermediario">
                 <div className="box">
                 <img src={Intermediario} />
+                <p></p>
                 <h3>Intermediário</h3>
+                <p></p>
                 <p>É para você que gosta de ler, e tem um ritmo de leitura mais
                 rápido que outras pessoas, mas não tem tanto tempo para ler!
                 </p>
@@ -99,7 +103,9 @@ const Page = () => {
                 <div className="avançado">
                 <div className="box">
                 <img src={Avançado} />
+                <p></p>
                 <h3>Avançado</h3>
+                <p></p>
                 <p>Para devoradores de livros, que conseguem ler um livro inteiro em um dia se precisar!
                 Amantes da literatura e dominam essa área.
                 </p>
