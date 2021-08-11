@@ -22,7 +22,7 @@ const Page = () => {
                <div className="description">
                    <h1>Bookfolio</h1>
 
-                   <p>Encontre seu livro perfeito. Leia no seu tempo</p>
+                   <p>Encontre seu livro perfeito. Leia no seu tempo.</p>
                </div>
                 <Link className="login"to="/signin"><button1>Começar</button1></Link>
                </div>
@@ -38,11 +38,11 @@ const Page = () => {
                         Escolha seu nível de leitor(a)
                         </h2>
                         <br/>
-                        <p>.Iniciante: Vamos devagar!</p>
+                        <p>. Iniciante: Vamos devagar!</p>
                         
-                        <p>.Intermediário: Gosto muito de ler!</p>
+                        <p>. Intermediário: Gosto muito de ler!</p>
                         
-                        <p>.Avançado: Devorador(a) de livros!</p>
+                        <p>. Avançado: Devorador(a) de livros!</p>
                     </div>
                 </Section>
 
@@ -62,10 +62,10 @@ const Page = () => {
                         </h2>
                         <br/>
                         <p>Escolha por:</p>
-                        <p>.Gênero</p>
-                        <p>.Autor</p>
-                        <p>.Tempo de leitura</p>
-                        <p>.Número de páginas</p>
+                        <p>. Gênero</p>
+                        <p>. Autor</p>
+                        <p>. Tempo de leitura</p>
+                        <p>. Número de páginas</p>
 
                     </div>
 

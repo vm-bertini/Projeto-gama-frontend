@@ -141,7 +141,7 @@ export const PageArea = styled.div`
             background-color:#483D8B;  
     }
     .login-eye {
-        top:200px;
+        
         
     }
     }

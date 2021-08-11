@@ -89,7 +89,7 @@ p {
 }
 
 .box {
-    display: block; width: 260px; text-align: center;
+    display: block; width: 267px; text-align: center;
     position: relative; padding-top:20px; padding-bottom: 50px; float: left; margin: 0 5px;
     bottom:20px;
     background-color:#E7E4E4;

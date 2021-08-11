@@ -3,6 +3,7 @@ import { PageArea } from './styled';
 import useApi from '../../helpers/BookAPI';
 
 
+
 import { PageContainer, PageTitle, ErrorMessage } from '../../components/MainComponents';
 
 const Page = () => {
@@ -56,7 +57,7 @@ const Page = () => {
                         <div className="area--tittle">Senha</div>
                         <div className="area--input">
                             <input 
-                            type="password" 
+                            type="password"
                             disabled={disabled}
                             value={password}
                             onChange={e=>setPassword(e.target.value)} 
@@ -69,7 +70,7 @@ const Page = () => {
                         <div className="area--title"></div>
                         <div className="area--input">
                             <button className="button1" disabled={disabled}>Entrar</button>      
-                            <label className="area">
+                        <label className="area">
                         <div className="area--cadastre">Não possui conta ?</div>
                         </label>
                         <label className="area">

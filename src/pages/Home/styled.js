@@ -4,6 +4,10 @@ import Image from './img/Imagem.jpg';
 
 export const PageArea = styled.div`
 
+* {
+    text-decoration:none;
+}
+
 .foto {
     background-image: url(${Foto});
     background-size: cover;
@@ -57,8 +61,11 @@ button2 {
     cursor:pointer;
     font-family:inter;
     /* align-items:center; */
-
     display: block;
+
+    &:hover {
+        background-color:#FF7F50;
+}
 }
 }
 
@@ -90,8 +97,11 @@ button1 {
     cursor:pointer;
     font-family:inter;
     /* align-items:center; */
-
     display: block;
+
+    &:hover {
+        background-color:#FF7F50;
+}
 }
 
 .logo {
@@ -213,6 +223,9 @@ h2 {
     width:240px;
 }
 
+section p {
+    width:265px;
+}
 
 
 
