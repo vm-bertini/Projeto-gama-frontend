@@ -20,16 +20,20 @@ const Page = () => {
         setDisabled(true);
         setError('');
 
-        const json = await api.login(email, password).catch((error) => {
+        const json = await api.login(email, password)
+        .then(res => {
+            if(res.error) {
+                setError(res.error);
+            } else {
+                Cookie.set('status', "Logado")
+                window.location.href = '/navigation'
+            }
+        })
+        .catch((error) => {
             window.location.href = '/signin'
         })
 
-        if(json.error) {
-            setError(json.error);
-        } else {
-            Cookie.set('status', "Logado")
-            window.location.href = '/navigation'
-        }
+        
 
         setDisabled(false);
 
