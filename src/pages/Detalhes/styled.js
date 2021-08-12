@@ -21,7 +21,7 @@ export const PageArea = styled.div`
         align-items: center;
         flex-direction: row;
         flex-wrap: wrap;
-        width: 60%;
+        width: 100%;
     
     
         .book_back{
@@ -32,12 +32,13 @@ export const PageArea = styled.div`
             position: relative;
             top: 0px; 
             text-align: left;
-            aspect-ratio:1;
+            aspect-ratio:1.453;
             width:60%;
             border-radius: 15px;
             .book_info{
                 display:flex;
                 flex-direction: column;
+                justify-content: space-between;
                 flex-wrap: wrap; 
                 position: relative;
                 text-align: left;
@@ -45,19 +46,18 @@ export const PageArea = styled.div`
                 height: 85%;
                 .info{
                     color: #3B2F93;
-                    width: 45%;
-                    aspect-ratio: 450/100;
+                    width: 50%;
+                    aspect-ratio: 6.4;
                     position: relative;
                     text-align: left;
-                    margin-bottom: 2%;
+                    margin-bottom: 3%;
                     h3{
                         color: #3B2F93;
-                        width: 100%;
-                        height: 45%;
-                        font-size: 1.23vw;
+                        height: 55%;
+                        font-size: 1.20vw;
                         overflow: hidden ;
                         font-weight: normal;
-                        margin-bottom: 3%;
+                        margin-bottom: 1%;
                     }
                     h2{
                         color: #3B2F93;
@@ -72,9 +72,8 @@ export const PageArea = styled.div`
                     font-weight:bold;
                     font-size: 1.7vw;
                     width: 45%;
-                    margin-bottom: 5%;
                     margin-right: 1%;
-                    aspect-ratio: 450/100;
+                    aspect-ratio: 6.54;
                     position: relative;
                     margin-bottom:; 
                     text-decoration: underline;
@@ -82,32 +81,35 @@ export const PageArea = styled.div`
                 }
                 .leituras{
                     display: flex;
-                    justify-content: left;
+                    justify-content: space-between;
                     align-items: left;
                     flex-direction: column;
                     flex-wrap: wrap;
                     width: 45%;
-                    aspect-ratio: 450/100;
-                    margin-bottom: 5%;
+                    aspect-ratio: 5.8;
+                    padding: 1%;
+                    margin-bottom: 3%;
                     .leitura{
                         display: flex;
                         justify-content: left;
                         align-items: centre;
                         flex-direction: row;
                         width:100%;
-                        height: 50%;
+                        height: 45%;
             
                         .img_template{
-                            width: 12%;
+                            width: 8%;
                             height: 100%; 
             
                             
                         }
                         h4{
+                            position: absolute;
+                            top: 0.25vw;
                             font-size: 1.1vw;;
                             color: #3B2F93;
                             text-align: left;
-                            width: 76%;
+                            width: 92%;
                             height: 100%;
                             position: relative;
                             #text{
@@ -123,8 +125,11 @@ export const PageArea = styled.div`
                 @media(max-width:764px){
                     .leituras{
                         .leitura{
+                            .img_template{
+                                width: 11%;   
+                            }
                             h4{
-                                font-size: 4vw;
+                                font-size: 2.4vw;
                             }
                         }  
                     }
@@ -140,35 +145,33 @@ export const PageArea = styled.div`
     
                 .text{
                     width: 45%;
-                    aspect-ratio: 80/100;
+                    aspect-ratio: 1.16;
                 }
                     
                 .sinopse-title{
                 color: #3B2F93;
                 width: 100%;
-                height: 10%;
-                font-size: 0.8vw;
-                margin-bottom: 5%;
+                height: 15%;
+                font-size: 1.6vw;
                 text-decoration: underline;
                 
                 }
     
                 .sinopse{
                     display:flex;
-                    width: 90%;
+                    width: 100%;
                     height:85%;
                     overflow:auto;
                     word-break: break-word;
                     color: #3B2F93;
-                    font-size: 1.2vw;
+                    font-size: 1.3vw;
                 }
                 .Autor-title{
                     
                     color: #3B2F93;
                     width: 100%;
-                    height: 10%;
-                    font-size: 0.8vw;
-                    margin-bottom: 5%;
+                    height: 15%;
+                    font-size: 1.6vw;
                     text-decoration: underline;
                     
                 }
@@ -176,9 +179,9 @@ export const PageArea = styled.div`
                 .Autor{
                     display:flex;
                     width: 100%;
-                    height: 90%;
+                    height: 85%;
                     overflow-x: hidden;
-                    overflow-y: scroll;
+                    overflow-y: auto;
                     font-size: 15px;
                     word-break: break-word;
                     color: #3B2F93;
@@ -187,10 +190,10 @@ export const PageArea = styled.div`
     
                 @media(max-width:764px){
                     .sinopse-title{
-                        font-size: 3.5vw;
+                        font-size: 3vw;
                     }
                     .Autor-title{
-                        font-size: 3.5vw;
+                        font-size: 3vw;
                     }
                     .sinopse{
                         font-size: 3vw;
@@ -199,15 +202,17 @@ export const PageArea = styled.div`
                         font-size: 3vw;
                     }
                     .title{
-                        font-size: 3.5vw;
+                        font-size: 4vw;
                     }
                 }
                 .button{
-                    text-align: center;
-                    width: 15vw;
+                    display: flex;
+                    float: right;
+                    height:44%;
+                    justify-content: center;
                     .comprar{
-                        width: 100%;
-                        height: 100%;
+                        width: 16vw;
+                        height: 3.2vw;
                     }
                     button{
                         padding: 0;
@@ -222,16 +227,16 @@ export const PageArea = styled.div`
         }
         .cover{
             float: left;
-            backgrond-color: white;
             border-radius: 25px;
-            border: 1px solid white;
             width: 30%;
-            margin: 3%;
+            margin: 1%;
             aspect-ratio:1;
             img{
+                
+                border: 1px solid #E7E4E4;
                 border-radius: 25px;
                 width: 90%;
-                aspect-ratio:9/20;
+                aspect-ratio:0.64;
             }
         }
     }
@@ -253,26 +258,31 @@ export const PageArea = styled.div`
             .book_info{
                 display:flex;
                 flex-direction: column;
-                flex-wrap: wrap; 
+                flex-wrap: wrap;
+                justify-content: start; 
                 position: relative;
                 text-align: left;
                 margin-top: 10%;
                 width: 80%;
                 height: 95%;
                 .info{
-                    aspect-ratio: 3 ;
+                    aspect-ratio: 4.224 ;
                 }
                 .title{
-                    aspect-ratio: 3 ;
+                    aspect-ratio: 4.32 ;
                 }
                 .leituras{
-                    aspect-ratio: 3 ;
+                    aspect-ratio: 4.32 ;
+        
                 }
                 .text{
+                    aspect-ratio: 0,7656;
                 }
                 .button{
-                    aspect-ratio: 3 ;
-                    width: 35vw;
+                    .comprar{
+                        width: 21vw;
+                        height: 4.2vw;
+                    }
                 }
             }
         }
@@ -280,7 +290,7 @@ export const PageArea = styled.div`
         .cover{
             width: 40%;
             position: relative;
-            top: 10vw;
+            top: 9vw;
             z-index:9;
             border:none;
             img{

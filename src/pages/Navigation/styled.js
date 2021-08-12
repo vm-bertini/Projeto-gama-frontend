@@ -185,11 +185,13 @@ export const PageArea = styled.div`
         }
         .info{
             float: left;
+            display
             color: #3B2F93;
             font-size: 18px;
             width:130px;
             height: 50px;
             position: relative;
+            margin-bottom: 10px;
             top: -40px;
             text-align: left;
             h3{
@@ -198,8 +200,7 @@ export const PageArea = styled.div`
                 flex-wrap: wrap;
                 color: #3B2F93;
                 max-height: 35px;
-                overflow-x: hidden;
-                overflow-y: scroll;
+                overflow-x: auto;
                 margin-bottom: 5px;
                 font-size: 15px;
                 font-weight: normal;
@@ -256,6 +257,9 @@ export const PageArea = styled.div`
             .arrow{
                 height: 100%;
                 width: 100%;
+                &:hover {
+                    filter: saturate(1.3)
+            }
             }
         }
         @media(max-width:305px){

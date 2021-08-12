@@ -67,7 +67,7 @@ const Header = () => {
                                         <Link className="conta"to="/"> Sobre </Link>
                                     </li>
                                     <li onClick={handleDelete}>
-                                        <Link className="navegar">sair</Link>
+                                        <button className="navegar">sair</button>
                                     </li>
                                 </nav>
                             </div>

@@ -10,10 +10,7 @@ const Store = ({children}) => {
 
     
     useEffect(() => {
-        console.log(state)
-        console.log(Cookie.get('status'))
         if (Cookie.get('status') == "Logado"){
-            console.log("oi")
             api.getUserInfo().then(res => {
                 setState(res)
             }).catch(err => {

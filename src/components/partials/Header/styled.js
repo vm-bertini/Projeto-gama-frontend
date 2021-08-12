@@ -31,6 +31,8 @@ width:100%;
 
 .navegar {
     color:#F2994A;
+    border: none;
+    background-color: #E7E4E4 ;
 }
 
 
@@ -56,6 +58,7 @@ a {
             text-align: center;
             right: 0px ;
             top: 20px;
+            min-width: 80px;
             width: 10vw;
             z-index: 1;
             -webkit-user-select: none;
@@ -130,8 +133,16 @@ a {
             transition: all .2s linear;
             
         }
+        nav li button{
+            font-size: 20px;
+
+            &:hover{
+                cursor:pointer;
+            }
+        }
 
         #check:checked ~.barra{
+            min-width: 80px;
             width: 10vw;
             right: 0;
             display:block;
