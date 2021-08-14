@@ -14,6 +14,7 @@ const Store = ({children}) => {
             api.getUserInfo().then(res => {
                 setState(res)
             }).catch(err => {
+                Cookie.remove('status')
             })
         }
 

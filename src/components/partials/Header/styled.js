@@ -91,12 +91,14 @@ a {
         .barra{
             
             background-color:  #E7E4E4;
-            border: 1px solid #3B2F93;
+            border: 1px none #3B2F93;
             height: 225px;
             position: absolute;
-            right: -500px;
+            right: 0;
+            max-width: 10vw;
+            width: 0%;
             top:97px;
-            transition: all .35s linear;
+            transition: all .2s linear;
             z-index:6;
         }
 
@@ -142,8 +144,8 @@ a {
         }
 
         #check:checked ~.barra{
-            min-width: 80px;
-            width: 10vw;
+            border: 1px solid #3B2F93;
+            width: 30%;
             right: 0;
             display:block;
             top:97px;
