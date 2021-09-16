@@ -15,6 +15,7 @@ const Store = ({children}) => {
                 setState(res)
             }).catch(err => {
                 Cookie.remove('status')
+                window.location.reload()
             })
         }
 
