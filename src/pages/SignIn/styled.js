@@ -73,6 +73,9 @@ export const PageArea = styled.div`
     text-decoration:underline;
     text-align:top;
 }
+.login{
+    text-decoration: none;
+}
 
 .area--input {
     flex:1;
@@ -146,6 +149,7 @@ export const PageArea = styled.div`
         
         
     }
+    
     }
      }
     }

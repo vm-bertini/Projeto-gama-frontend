@@ -87,7 +87,7 @@ const Page = () => {
 
                <div>
                <div className="leitura">
-            <div className="area--leitura">Quero encontra minha próxima leitura!</div>
+            <div className="area--leitura">Quero encontrar minha próxima leitura!</div>
             <Link className="login"to="/signin"><button className='button2'>Começar</button></Link>
             </div>
             </div>

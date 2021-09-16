@@ -22,6 +22,10 @@ export const PageArea = styled.div`
     justify-content: center;
 }
 
+.login{
+    text-decoration: none;
+}
+
 
 .description {
     width:100%;
@@ -50,6 +54,10 @@ export const PageArea = styled.div`
 }
 
 .leitura {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     height:25vh;
     background-color:#3B2F93;
     color:#FFFFFF;
@@ -84,14 +92,13 @@ export const PageArea = styled.div`
 
 .area--leitura {
     display:flex;
-    justify-content: start;
     flex-direction: column;
     text-align:center;
     font-weight:bold;
     font-size: 4vh;
     font-family:inter;
     width: 100%;
-    height: 50%;
+    height: auto;
    
 }
 
@@ -104,6 +111,7 @@ export const PageArea = styled.div`
     /* margin-top:150px; */
     background-color:#F2994A;
     border:0;
+    text-decoration: none;
     outline:0;
     padding:9px 10px;
     border-radius:20px;
