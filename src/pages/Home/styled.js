@@ -58,7 +58,7 @@ export const PageArea = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height:25vh;
+    height:30vh;
     background-color:#3B2F93;
     color:#FFFFFF;
     width: 100%;
