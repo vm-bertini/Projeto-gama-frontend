@@ -80,15 +80,7 @@ const Page = () => {
                         <label className="area">
                         <div className="area--cadastre">Não possui conta ?</div>
                         </label>
-                        <label className="area">
-                        <div className="area--button"></div>
-                        <div className="area--input">
                         <a className='login'href="../signup" target="_parent"><button className="button2" type="button" disabled={disabled} >Cadastre-se</button></a>
-                    </div>
-                    <label className="area">
-                        <div className="area--tit"></div>
-                    </label>
-                    </label>
                     </div>
                     </label>
                 </form>

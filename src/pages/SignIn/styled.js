@@ -13,6 +13,7 @@ export const PageArea = styled.div`
     display:block;
     margin-left:auto;
     margin-right:auto;
+    width:90%;
 }
 
 .area--title {

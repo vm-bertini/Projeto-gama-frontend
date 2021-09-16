@@ -44,12 +44,15 @@ export const PageBody = styled.div`
 
 export const ErrorMessage = styled.div`
 
-    margin:10px 0;
+    margin:10px 15px;
     display: flex;
+    max-width:364px;
+    margin-left: auto;
+    margin-right: auto;
     justify-content: center;
     background-color:#FFCACA;
     color:#000;
     border:2px solid #FF0000;
     padding:10px;
-    width:100%;
+    width:90%;
 `;
