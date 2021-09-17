@@ -145,7 +145,9 @@ a {
 
         #check:checked ~.barra{
             border: 1px solid #3B2F93;
-            width: 30%;
+            width: 15vw;
+            min-width: 100px;
+            max-width: 150px;
             right: 0;
             display:block;
             top:97px;

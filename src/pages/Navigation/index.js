@@ -103,7 +103,7 @@ const Page = () => {
                     <select className='dropdown' onChange={event =>{setfilter(event.target.value)}} defaultValue={'DEFAULT'}>
                         <option value='DEFAULT' disabled className='dontshow'>Gêneros</option>
                         <option value="" ></option>
-                        <option value="fantasia">fantasia</option>
+                        <option value="fantasia">Fantasia</option>
                         <option value="Auto-ajuda">Auto-ajuda</option>
                         <option value="Biografia">Biografia</option>
                         <option value="Romance">Romance</option>

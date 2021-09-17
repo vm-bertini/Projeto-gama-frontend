@@ -209,8 +209,8 @@ export const PageArea = styled.div`
                     height:44%;
                     justify-content: center;
                     .comprar{
-                        width: 20em;
-                        height: 4.5em;
+                        width: 25vw;
+                        height: 6vw;
                     }
                     button{
                         padding: 0;
@@ -278,8 +278,8 @@ export const PageArea = styled.div`
                 }
                 .button{
                     .comprar{
-                        width: 21vw;
-                        height: 4.2vw;
+                        width: 25vw;
+                        height: 6vw;
                     }
                 }
             }

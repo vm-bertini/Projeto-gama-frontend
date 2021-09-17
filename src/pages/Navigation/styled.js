@@ -9,7 +9,7 @@ export const PageArea = styled.div`
     flex-direction: row;
 
     input{
-        width: 400px;
+        width: 90%;
         border-radius: 15px;
         border: 2px #3B2F93 solid;
         padding: 5px 5px 5px 25px;
@@ -17,19 +17,28 @@ export const PageArea = styled.div`
         left: 0;
         bottom: 10px;
         z-index: 5;
-        outline:none
+        outline:none;
+        max-width: 400px;
+        margin-right: auto;
+        margin-left: auto;
     }
 }
 
 .title{
     padding-top:40px;
     text-align: center;
-    font-size:35px;
+    font-size:7vw;
     font-family:Inter;
     font-style: normal;
     font-weight: bold;
     color: #3B2F93;
     padding-bottom:25px;
+}
+
+@media(max-width:480px){
+    .title{
+        font-size: 6vw;
+    }
 }
 
 .search-options{
