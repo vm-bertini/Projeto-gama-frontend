@@ -20,12 +20,13 @@ export const PageArea = styled.div`
     display:block;
     margin-left:auto;
     margin-right:auto;
-    text-align:center;
-    margin-right:220px;
+    text-align:left;
+    margin-right:auto;
     padding:5px;
     font-weight:bold;
     font-size:14px;
     font-family:inter;
+    max-width: 364px;
 
 }
 
