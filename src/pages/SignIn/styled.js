@@ -121,6 +121,7 @@ export const PageArea = styled.div`
         cursor:pointer;
         font-family:inter;
         align-items:center;
+        height: 38px;
 
         &:hover {
             background-color:#FF7F50;
@@ -143,6 +144,7 @@ export const PageArea = styled.div`
         cursor:pointer;
         font-family:inter;
         align-items:center;
+        height: 38px;
 
         &:hover {
             background-color:#483D8B;  
