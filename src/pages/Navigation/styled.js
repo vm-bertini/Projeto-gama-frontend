@@ -27,7 +27,7 @@ export const PageArea = styled.div`
 .title{
     padding-top:40px;
     text-align: center;
-    font-size:7vw;
+    font-size:2.5em;
     font-family:Inter;
     font-style: normal;
     font-weight: bold;
@@ -35,9 +35,15 @@ export const PageArea = styled.div`
     padding-bottom:25px;
 }
 
-@media(max-width:480px){
+@media(max-width: 400px){
     .title{
-        font-size: 6vw;
+        font-size: 1.4em;
+    }
+}
+
+@media(max-width: 511px){
+    .title{
+        font-size: 1.8em;
     }
 }
 

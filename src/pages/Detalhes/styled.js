@@ -207,10 +207,11 @@ export const PageArea = styled.div`
                     display: flex;
                     float: right;
                     height:44%;
+                    width: 55%;
                     justify-content: center;
                     .comprar{
-                        width: 25vw;
-                        height: 6vw;
+                        width: 100%;
+                        height: 50%;
                     }
                     button{
                         padding: 0;
@@ -278,8 +279,8 @@ export const PageArea = styled.div`
                 }
                 .button{
                     .comprar{
-                        width: 25vw;
-                        height: 6vw;
+                        width: 100%;
+                        height: 50%;
                     }
                 }
             }
